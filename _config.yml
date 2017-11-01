@@ -210,14 +210,14 @@ hosted: true
 local_search: true
 
 # 百度统计
-baidu_tongji: c5cdc16e3394425180e7b88162fa8834 #appid
+baidu_tongji: 
 
 # valine评论系统
 ## https://valine.js.org/
 valine:
   enable: true
-  appid: erEgbvcciIYD87tp13Iun3sj-gzGzoHsz
-  appkey: jEabNeSP5PE1C1RDUdJxml93
+  appid: #appid
+  appkey: #appkey
   notify: false  #是否开启邮箱提醒
   verify: false  #是否开启验证码
   placeholder: give me some sugers plz... #留言板中的预留信息
@@ -226,8 +226,8 @@ valine:
 # 文章浏览统计
 leancloud_visitors:
   enable: true
-  app_id: erEgbvcciIYD87tp13Iun3sj-gzGzoHsz
-  app_key: jEabNeSP5PE1C1RDUdJxml93
+  app_id: #appid
+  app_key: #appkey
   icon: true #true只显示图标，false只显示文字
 
 # 数学公式

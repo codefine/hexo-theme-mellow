@@ -1,0 +1,127 @@
+.top-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: @textPrimaryColorWhite;
+    height: @headerH;
+    background: @primaryColor_1;
+    -webkit-transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
+    transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
+    z-index: 30;
+
+    &.fixed {
+        box-shadow: @boxShadow;
+
+        .header-title {
+            visibility: visible;
+        }
+
+    }
+
+}
+
+.header-icon {
+    width: @headerH;
+    height: @headerH;
+    line-height: @headerH;
+    text-align: center;
+    color: @textPrimaryColorWhite;
+
+    &:hover {
+        color: @textPrimaryColorWhite;
+    }
+}
+
+.header-title {
+    visibility: hidden;
+    font-weight: 500;
+    line-height: 56px;
+    font-size: @font-size;
+    text-align: center;
+    white-space: nowrap;
+    transition: text-indent 0.4s ease-in-out;
+    &.push{
+        text-indent: 200px;
+    }
+}
+
+.header-description{
+    font-weight: 200;
+}
+
+.content-header {
+    min-height: 210px;
+    margin-left: -240px;
+    padding: 104px 16px 48px 256px;
+    color: @textPrimaryColorWhite;
+    background: @primaryColor_1;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+
+    .subtitle {
+        padding-top: 6px;
+        font-weight: 200;
+        color: @textPrimaryColorWhite;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .title {
+        font-weight: 500;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .article-category-list-link {
+        color: lighten(@primaryColor_2, 10%);
+    }
+
+}
+
+.post-header {
+
+    .title, .subtitle {
+        display: none;
+    }
+}
+.tags-header,
+.categories-header {
+    position: relative;
+    z-index: 6;
+    padding-bottom: 0!important
+}
+
+@media screen and (max-width:1240px) {
+
+    .header-title {
+        text-align: left;
+        text-indent: 0;
+    }
+
+}
+
+@media screen and (max-width:760px) {
+    .content-header {
+        margin: 0;
+        min-height: auto;
+        padding: 72px 16px 20px;
+
+        .title {
+            font-size: @font-size + 10;
+            line-height: 30px;
+        }
+
+        .subtitle {
+            font-size: @font-size;
+            line-height: 20px
+        }
+
+    }
+
+    .post-header {
+        .title {
+            display: block;
+            font-size: @font-size + 10;
+            line-height: 1.5;
+        }
+    }
+
+}

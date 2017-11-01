@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<%- partial('_partial/head') %>
+<%- partial('_custom/head') %>
+<body>
+    <%- partial('_partial/loading') %>
+    <%- partial('_partial/menu') %>
+    <main id="main">
+        <%- body %>
+        <%- partial('_partial/footer') %>
+    </main>
+    <%- partial('_partial/after-footer') %>
+    <%- partial('_custom/body') %>
+    <%- partial('_partial/script') %>
+    <%- partial('_custom/script') %>
+</body>
+</html>

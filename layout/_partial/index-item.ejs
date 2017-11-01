@@ -1,0 +1,44 @@
+<article id="<%= post.layout %>-<%= post.slug %>"
+  class="article-card article-type-<%= post.layout %>" itemprop="blogPost">
+    <% if (theme.top_icon && post.top) { %>
+    <%- partial('post/top') %>
+    <% } %>
+    <%- partial('post/title', { hasLink: true }) %>
+    <div class="post-meta">
+        <%- partial('post/date', {date_format: config.date_format}) %>
+        <%- partial('post/category') %>
+        <%- partial('post/visitor') %>
+        <%- partial('post/music') %>
+    </div>
+    <div class="post-content" id="post-content" itemprop="postContent">
+    <%
+        // 首页缩略图大小及路径处理
+        post.excerpt = post.excerpt.replace(/\<img.+\"\>/g, (img) => {
+            return img.replace(/(img\s)(.+)(\>)/g, (match, $1, attrs, $2) => {
+                let [src, alt, title = '', imgClass = '' ] = attrs.split(' ');
+                if ( !/src\=\"\//g.test(src) ) {
+                    src = src.replace(/src\=\"/g, `src="${ url_for(post.path) }`);
+                }
+                imgClass = `class="index-item-img"`;
+                let res = Array.of(src, alt, title, imgClass);
+                return $1 + res.join(' ') + $2;
+            });
+        });
+    %>
+    <% if(theme.excerpt_render) { %>
+        <%- post.excerpt || post.content %>
+    <% } else { %>
+        <%- post.excerpt ? post.excerpt : truncate(strip_html(post.content), {
+            length: theme.excerpt_length
+        }) %>
+    <% } %>
+        <a href="<%- url_for(post.path) %>" class="post-more waves-effect waves-button">
+            <%- theme.excerpt_link %>
+        </a>
+    </div>
+    <% if(post.tags && post.tags.length){ %>
+    <div class="post-footer">
+        <%- partial('post/tag') %>
+    </div>
+    <% } %>
+</article>

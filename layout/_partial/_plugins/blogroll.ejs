@@ -1,0 +1,8 @@
+<p>
+    <span>Links：</span>
+    <% for (var i in theme.blogroll) { var rollItem = theme.blogroll[i] %>
+    <span class="blogroll-item">
+        <a href="<%- rollItem.url %>" target="_blank"><%- rollItem.name %></a>
+    </span>
+    <% } %>
+</p>

@@ -1,0 +1,139 @@
+.archive-separator {
+    margin: 35px 0 13px;
+    color: @primaryColor_1;
+    font-size: @font-size;
+    font-weight: bold;
+
+    &:first-child {
+        margin-top: 10px;
+    }
+}
+
+.article-card {
+    padding: 16px 20px 0;
+    .card();
+
+    .post-content {
+        word-break: break-word;
+
+        .highlight,
+        > pre {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding: 20px;
+        }
+    }
+
+    .post-time {
+        line-height: 24px;
+        font-weight: bold;
+    }
+
+    .post-footer {
+        margin: 0 -20px;
+        padding: 12px 20px 8px;
+    }
+
+    .top{
+        .tip-left();
+        @topSize: 20px;
+        width: @topSize;
+        height: @topSize;
+        position: absolute;
+        top: 0;
+        right: 12px;
+        .top-wrap{
+            width: @topSize;
+            height: @topSize;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 0 3px 0 0;
+            overflow: hidden;
+            
+            p{
+                position: absolute;
+                left: 0;
+                top: -12px;
+                width: @topSize;
+                height: @topSize;
+                border-top: @topSize solid @primaryColor_2;
+                border-left: @topSize solid transparent;
+            }
+        }
+        &:before {
+            content: 'TOP：'attr(data-title);
+        }
+        
+    }
+
+}
+
+.archive-article {
+    .post-meta{
+        text-align: left;
+    }
+    .post-title {
+        font-size: @font-size + 4;
+        margin-bottom: 0;
+        padding-bottom: 16px;
+        text-align: left;
+    }
+}
+.waterfall {
+    position: relative;
+    margin: 0 -10px -20px;
+    .fade;
+}
+.waterfall-item {
+    position: absolute;
+    width: 50%;
+    padding: 0 10px 20px;
+}
+
+@media screen and (max-width:760px) {
+    .archive-article {
+        display: block;
+        margin: 0 -16px;
+        padding: 16px 16px 8px;
+        border-bottom: 1px solid @borderColor;
+        .post-footer {
+            border-top: none;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .article-card {
+        border-radius: 0;
+        .top{
+            right: 0;
+            .top-wrap{
+                border-radius: 0;
+            }
+        }
+    }
+
+    .archive-separator {
+        margin-top: 16px;
+    }
+
+    .waterfall {
+        margin: 0;
+        height: auto!important;
+        opacity: 1;
+        .transform(translateY(0));
+    }
+
+    .waterfall-item {
+        position: static;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .archive-article {
+        padding: 16px 16px 0;
+    }
+}

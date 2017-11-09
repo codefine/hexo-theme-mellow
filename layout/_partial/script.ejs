@@ -1,0 +1,34 @@
+<!-- main-js -->
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<% if (theme.waves) { %>
+<script type="text/javascript" src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<% } %>
+<script type="text/javascript" src="<%- url_for(theme_js('/js/method', cache)) %>"></script>
+<script type="text/javascript" src="<%- url_for(theme_js('/js/blog', cache)) %>"></script>
+
+<!-- third-party -->
+<% if (theme.baidu_tongji) { %>
+<%- partial('_third-party/baidu_tongji') %>
+<% } %>
+
+<% if (theme.local_search) { %>
+<%- partial('_third-party/local_search') %>
+<% } %>
+
+<% if ( page.comments || typeof page.comments === "undefined" ) { %>
+    <% if (theme.valine.enable) { %>
+        <%- partial("_third-party/valine") %>
+    <% } %>
+<% } %>
+
+<% if (theme.leancloud_visitors.enable) { %>
+<%- partial('_third-party/leancloud_visitors') %>
+<% } %>
+
+<% if (theme.mathjax.enable && ( page.mathjax || typeof page.mathjax === "undefined" ) ) { %>
+    <%- partial("_third-party/mathjax") %>
+<% } %>
+
+<% if (theme.title_change) { %>
+    <%- partial("_third-party/dynamic_title") %>
+<% } %>

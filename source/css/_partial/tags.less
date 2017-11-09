@@ -1,0 +1,131 @@
+.tabs-bar {
+    position: relative;
+    padding: 0;
+    margin-top: 14px;
+    overflow: hidden;
+    background: @primaryColor_1;
+
+    &.expand {
+        overflow: visible;
+        text-shadow: none;
+        .tags-list {
+            position: relative;
+            top: 38px;
+            left: 0;
+            display: block;
+            padding: 16px 0;
+            white-space: normal;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: @boxShadow;
+        }
+        
+        .tags-list .tags-list-item {
+            padding: 12px 1em;
+            color: @textSecondaryColor;
+            &:hover {
+                opacity: .7;
+                text-decoration: underline;
+            }
+            &:after {
+                display: none;
+            }
+            &.active {
+                color: @textPrimaryColorWhite;
+                background: @primaryColor_2;
+                border-radius: .2em
+            }
+        }
+
+        .tags-list-more .action{
+            color: @primaryColor_1;
+        }
+    }
+}
+.tags-list {
+    font-size: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 76px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0 auto;
+    list-style: none;
+    padding: 16px 0;
+    white-space: nowrap;
+    .transition(.2s);
+
+    .flex-row;
+}
+
+.tags-list-item {
+    font-size: @font-size !important;
+    position: relative;
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    padding: 12px 1em;
+    line-height: 20px;
+    color: saturate(@textPrimaryColorWhite, 0.8);
+    border-radius: .2em .2em 0 0;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+    }
+    &.active {
+        color: @textPrimaryColorWhite;
+        &:after {
+            background: @primaryColor_2
+        }
+    }
+    &:hover,
+    &:active {
+        color: @textPrimaryColorWhite;
+        text-decoration: none;
+    }
+}
+
+.tags-list-more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    height: 44px;
+    padding-left: 1em;
+    
+    .action {
+        width: 44px;
+        height: 44px;
+        line-height: 20px;
+        border-radius: 50%;
+        .transition(.2s);
+    }
+}
+
+@media screen and (max-width:760px) {
+    .tabs-bar {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 0 0 0 16px;
+        width: auto;
+    }
+
+    .tags-list {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none
+        }
+    }
+    
+    .tags-list-more {
+        display: none;
+    }
+}

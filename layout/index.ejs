@@ -1,0 +1,19 @@
+<% if (is_home()) { %>
+    <%- partial('_partial/header', {
+        title: config.title,
+        hdClass: 'index-header'
+    }) %>
+    <div class="container body-wrap">
+        <ul class="post-list">
+        <% page.posts.each(function (post, index) { %>
+            <li class="post-list-item fade">
+                <%- partial('_partial/index-item', {
+                    post: post,
+                    index: index
+                }) %>
+            </li>
+        <% }) %>
+        </ul>
+        <%- partial('_partial/paginator') %>
+    </div>
+<% } %>

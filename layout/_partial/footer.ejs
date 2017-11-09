@@ -1,0 +1,37 @@
+<footer class="footer">
+    <% if (theme.visit_counter || theme.blogroll) { %>
+    <div class="top">
+        <% if (theme.visit_counter) { %>
+            <%- partial("_plugins/site-visitor") %>
+        <% } %>
+        <% if (theme.blogroll) { %>
+            <%- partial("_plugins/blogroll") %>
+        <% } %>
+    </div>
+    <% } %>
+    <div class="bottom">
+        <p>
+            <span>
+                <%-config.author %> &copy; <%if (theme.since_year && theme.since_year < date(new Date(), "YYYY")) {%><%- theme.since_year %> - <%}%><%- date(new Date(), "YYYY") %>
+            </span>
+        		
+           	<% if(theme.ICP_license) {%>
+           	<span>
+           		<a href="http://www.miitbeian.gov.cn/" target="_blank"><%- theme.ICP_license %></a>
+           	</span>
+           	<% } %>
+            
+            <% if(theme.power) {%>
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank"><%= config.theme%></a>
+            </span>
+            <% } %>
+            
+            <% if(theme.hosted) {%>
+            <span>
+	            Hosted by <a href="https://coding.net/pages" target="_blank">Coding Pages</a>
+            </span>
+            <% } %>
+        </p>
+    </div>
+</footer>

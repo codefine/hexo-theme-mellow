@@ -1,5 +1,5 @@
 # hexo-theme-mellow
-# https://github.com/yscoder/hexo-theme-indigo
+# https://github.com/codefine/hexo-theme-mellow
 # 为了避免未知解析错误，配置中的缩紧为2个半角空格，冒号后跟1个半角空格
 # 不需要的配置可以注释掉，也可以修改对应键布尔值(enable和disable)
 
@@ -198,7 +198,7 @@ power: true
 ## 如果使用github或者gitee等pages功能，可以设置为false
 ## 如果使用coding.net的pages作为host，该选项将帮助您清楚默认广告页面
 ## 详情见https://coding.net/help/doc/pages/guide-page.html
-hosted: true
+hosted: false
 
 ##############################################################################################################################
 

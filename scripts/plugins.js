@@ -36,6 +36,9 @@ hexo.extend.filter.register('before_post_render', data => {
             const title = (attrs[1] && attrs[1].replace(/\"|\'/g, '')) || '';
             return `{% image ${attrs[0]} '${alt}' '${title}' %}`
         })
-    })
+    });
+
+    //删除xml的非法字符\x08
+    data.content = data.content.replace(/\x08/g, "");
     return data;
 });

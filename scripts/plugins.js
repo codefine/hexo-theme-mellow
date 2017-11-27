@@ -38,7 +38,7 @@ hexo.extend.filter.register('before_post_render', data => {
         })
     });
 
-    //删除xml的非法字符\x08
-    data.content = data.content.replace(/\x08/g, "");
+    //删除xml的非法字符
+    data.content = data.content.replace(/[\x00-\x08]|[\x0B-\x0C]|[\x0E-\x1F]/g, "");
     return data;
 });

@@ -17,6 +17,7 @@ $.BLOG = {
 		this.tabBar();
 	},
 	basic: function() {
+		$.fixedClick();
 		$.page().loaded();
 	},
 	menu: function() {

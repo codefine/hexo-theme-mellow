@@ -220,7 +220,7 @@ var searchFunc = function (path, search_id, content_id) {
                 }
             }
 
-            input.addEventListener('input', inputEventFunction);
+            input.addEventListener('input', inputEventFunction, false);
         }
     });
 }

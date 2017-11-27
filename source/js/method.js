@@ -2,6 +2,9 @@ $.extend({
 	menuInWidth: 1240,
 	hideOnMask: [],
 	minWidth: 760,
+	fixedClick: function() {
+		FastClick.attach(document.body);
+	},
 	page: function () {
 		var $elements = $('.fade, .fade-scale');
 		var visible = false;

@@ -221,8 +221,9 @@ $.extend({
 				searchBtn.click(function () {
 					if ($(window).width() < $.minWidth) {
 						$('html').addClass('lock');
+					} else {
+						mask.addClass('in');
 					}
-					mask.addClass('in');
 					searchPanel.addClass('in');
 					$.hideOnMask = [];
 					$.hideOnMask.push($(this), searchPanel.find('.close'));
@@ -230,8 +231,9 @@ $.extend({
 				searchClose.click(function () {
 					if ($(window).width() < $.minWidth) {
 						$('html').removeClass('lock');
+					} else {
+						mask.removeClass('in');
 					}
-					mask.removeClass('in');
 					searchPanel.removeClass('in');
 				});
 			},

@@ -16,7 +16,7 @@ Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。 [Preview](http:
 
 ## Useage
 
-[文档 | Document]()
+[文档 | Document](https://github.com/codefine/hexo-theme-mellow/wiki)
 
 ## ChangeLog
 

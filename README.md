@@ -1,7 +1,9 @@
 hexo-theme-material-mellow
 ================
 
-Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。 [Preview](http://blog.lujingtao.com/)
+Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。 [预览地址](http://blog.lujingtao.com/)
+
+**已经被Hexo官方收录**
 
 ## Feature
 

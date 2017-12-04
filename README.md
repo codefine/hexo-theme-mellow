@@ -7,7 +7,7 @@ Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。 [预览地址](
 
 ## Feature
 
-1. 仅支持 IE10+ 等现代浏览器。
+1. 全端响应式主题。
 2. 添加了英文字体支持 bluehost。
 3. 添加了一些波纹效果。By [Waves](https://github.com/fians/Waves)
 4. 无后端依赖的分享、评论、浏览统计功能实现。
@@ -15,7 +15,7 @@ Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。 [预览地址](
 6. 支持文章打赏。
 7. 持续更新中... 
 
-## Useage
+## Document
 
 [文档 | Document](https://github.com/codefine/hexo-theme-mellow/wiki)
 

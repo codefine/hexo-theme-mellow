@@ -1,8 +1,8 @@
 hexo-theme-mellow
 =================
-[![](https://img.shields.io/badge/blog-@Michael.Lu-blue.svg)](https://blog.lujingtao.com)
-![](https://img.shields.io/badge/language-CN-red.svg)
-![](https://img.shields.io/badge/release-v1.0.8-brightgreen.svg)
+[![](https://img.shields.io/badge/release-v1.0.8-blue.svg)](https://github.com/codefine/hexo-theme-mellow/releases)
+[![](https://img.shields.io/badge/doc-CN-green.svg)](https://github.com/codefine/hexo-theme-mellow/wiki)
+[![](https://img.shields.io/badge/blog-@Michael.Lu-ff0000.svg)](https://blog.lujingtao.com)
 
 Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。
 

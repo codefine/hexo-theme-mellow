@@ -1,6 +1,6 @@
 hexo-theme-mellow
 ================
-[![version](https://img.shields.io/github/release/xCss/Valine.svg?style=flat-square)](https://github.com/xCss/Valine/releases)
+[![version](https://img.shields.io/github/release/xCss/Valine.svg?style=flat-square)](https://github.com/codefine/hexo-theme-mellow/releases)
 
 Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。 [预览地址](http://blog.lujingtao.com/)
 

@@ -2,6 +2,7 @@ hexo-theme-mellow
 =================
 [![](https://img.shields.io/badge/blog-@Michael.Lu-blue.svg)](https://blog.lujingtao.com)
 ![](https://img.shields.io/badge/language-CN-red.svg)
+![](https://img.shields.io/badge/release-v1.0.8-brightgreen.svg)
 
 Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。
 

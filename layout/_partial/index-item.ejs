@@ -16,7 +16,7 @@
         // 首页缩略图大小及路径处理
         post.excerpt = post.excerpt.replace(/(img\s)(.+)(\>)/g, (match, $1, attrs, $2) => {
             let [src, alt, title = '', imgClass = '' ] = attrs.split(' ');
-            if ( !/src\=\"\//g.test(src) &&  ( !/src\=\"http/g.test(src) || !/src\=\"https/g.test(src) ) ) { // 过滤已经形成相对路径以及外链的src
+            if ( !/src\=\"\//g.test(src) && !/src\=\"http/g.test(src) ) { // 过滤已经形成相对路径以及外链的src
                 src = src.replace(/src\=\"/g, `src="${ url_for(post.path) }`);
             }
             imgClass = `class="index-item-img"`;

@@ -65,110 +65,6 @@
         display: none;
     }
 
-    .column-2,
-    .column-3 {
-        .flex-row;
-        .flex-row-wrap;
-        .flex-justify-between;
-
-        // > * {
-        //     .flex-col;
-        // }
-    }
-
-    .column-2 {
-        > * {
-            width: 48%;
-        }
-    }
-
-    .column-3 {
-        > * {
-            width: 31%;
-        }
-    }
-
-    .timeline {
-        position: relative;
-        text-align: center;
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            z-index: 1;
-            width: 4px;
-            height: 100%;
-            margin-left: -2px;
-            background: @borderColor;
-        }
-
-        h5 {
-            position: relative;
-            z-index: 2;
-            display: inline-block;
-            margin-bottom: 15px;
-            padding: .5em 2em;
-            color: @textPrimaryColorWhite;
-            background: @primaryColor_1;
-            border-radius: 3px;
-            box-shadow: @boxShadow;
-        }
-
-        .item {
-            position: relative;
-            z-index: 2;
-            margin-bottom: 30px;
-            padding: 15px 0;
-            text-align: left;
-            > p {
-                display: inline-block;
-                width: 45%;
-                margin: 0;
-                padding: 10px 15px;
-                text-align: center;
-                .card(3px)
-            }
-
-            > h6 {
-                position: absolute;
-                top: 50%;
-                padding: 3px 8px;
-                color: @textPrimaryColorWhite;
-                background: @primaryColor_2;
-                border-radius: 3px;
-                .transform(translateY(-50%))
-            }
-
-            &:nth-child(odd) {
-                text-align: right;
-                > h6 {
-                    right: 50%;
-                    margin-right: 30px;
-                }
-            }
-
-            &:nth-child(even) {
-                > h6 {
-                    left: 50%;
-                    margin-left: 30px;
-                }
-            }
-
-            &:after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                border: 4px solid @primaryColor_2;
-                outline: 2px solid @backColor;
-                border-radius: 50%;
-                .transform(translate(-50%, -50%));
-            }
-
-        }
-    }
 }
 
 .page-about-me {
@@ -271,5 +167,110 @@
         font-weight: bold;
         color: @primaryColor_2;
         font-size: @font-size + 4;
+    }
+}
+
+.column-2,
+.column-3 {
+    .flex-row;
+    .flex-row-wrap;
+    .flex-justify-between;
+
+    // > * {
+    //     .flex-col;
+    // }
+}
+
+.column-2 {
+    > * {
+        width: 48%;
+    }
+}
+
+.column-3 {
+    > * {
+        width: 31%;
+    }
+}
+
+.timeline {
+    position: relative;
+    text-align: center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+        width: 4px;
+        height: 100%;
+        margin-left: -2px;
+        background: @borderColor;
+    }
+
+    h5 {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        margin-bottom: 15px;
+        padding: .5em 2em;
+        color: @textPrimaryColorWhite;
+        background: @primaryColor_1;
+        border-radius: 3px;
+        box-shadow: @boxShadow;
+    }
+
+    .item {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+        padding: 15px 0;
+        text-align: left;
+        > p {
+            display: inline-block;
+            width: 45%;
+            margin: 0;
+            padding: 10px 15px;
+            text-align: center;
+            .card(3px)
+        }
+
+        > h6 {
+            position: absolute;
+            top: 50%;
+            padding: 3px 8px;
+            color: @textPrimaryColorWhite;
+            background: @primaryColor_2;
+            border-radius: 3px;
+            .transform(translateY(-50%))
+        }
+
+        &:nth-child(odd) {
+            text-align: right;
+            > h6 {
+                right: 50%;
+                margin-right: 30px;
+            }
+        }
+
+        &:nth-child(even) {
+            > h6 {
+                left: 50%;
+                margin-left: 30px;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 4px solid @primaryColor_2;
+            outline: 2px solid @backColor;
+            border-radius: 50%;
+            .transform(translate(-50%, -50%));
+        }
+
     }
 }

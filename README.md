@@ -28,3 +28,8 @@ Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。
 升级前请仔细查看更改内容，如非必要可不升级。
 
 [ChangeLog](https://github.com/codefine/hexo-theme-mellow/releases)
+
+
+## Community
+
+QQ群：527753185

@@ -29,6 +29,15 @@ Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。
 
 [ChangeLog](https://github.com/codefine/hexo-theme-mellow/releases)
 
+## BasicRepo
+
+**一个搭载了mellow主题以及hexo基础环境的开源仓库重磅来袭！！！**
+
+如果您不想从零开始搭建，那么赶紧clone这个仓库吧。
+
+仓库地址[https://github.com/codefine/codefine.github.io](https://github.com/codefine/codefine.github.io)
+
+预览地址[https://codefine.github.io/](https://codefine.github.io/)
 
 ## Community
 

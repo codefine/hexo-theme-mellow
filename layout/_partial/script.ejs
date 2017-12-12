@@ -8,6 +8,10 @@
 <script type="text/javascript" src="<%- url_for(theme_js('/js/blog', cache)) %>"></script>
 
 <!-- third-party -->
+<% if (page.repo) { %>
+    <%- partial("_third-party/github_repo") %>
+<% } %>
+
 <% if (theme.baidu_tongji) { %>
 <%- partial('_third-party/baidu_tongji') %>
 <% } %>

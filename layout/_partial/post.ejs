@@ -15,7 +15,6 @@
                 return '<div class="'+ $1 +'">'
             }) %>
         </div>
-        
         <%- partial('post/copyright') %>
         <% if (post.reward || typeof post.reward === "undefined") { 
             if (theme.reward.alipay || theme.reward.wechat) { %>
@@ -31,6 +30,9 @@
         <% } %>
     </div>
     <%- partial('post/nav') %>
+    <% if (post.repo) { %>
+        <%- partial('post/repo') %>
+    <% } %>
 </article>
 <% if (post.reward || typeof post.reward === "undefined") {
     if (theme.reward.alipay || theme.reward.wechat) { %>

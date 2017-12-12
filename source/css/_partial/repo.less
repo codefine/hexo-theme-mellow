@@ -1,0 +1,153 @@
+#repo{
+    width: 200px;
+    height: 100px;
+    background: @githubCardColor;
+    border-radius: 4px;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    right: 18px;
+    top: -102px;
+    .boxShadow();
+
+    p{
+        margin: 0;
+    }
+
+    .loading{
+        width: 50px;
+        height: 50px;
+        background: url(../../img/refresh.png) no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -25px 0 0 -25px;
+        &.active{
+            animation: rotate 2s linear infinite;
+        }
+    }
+
+    .top{
+        width: 100%;
+        height: 70px;
+        color: #fff;
+        padding: 5px 5px;
+        opacity: 0;
+        transition: 0.4s ease-out;
+        &.active{
+            opacity: 1;
+        }
+
+        .avatar{
+            width: 50px;
+            height: 50px;
+            background: url(../../img/github.png) no-repeat center center;
+            background-size: 100% 100%;
+            margin: 5px 10px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .content>p{
+            width: 120px;
+            line-height: 30px;
+            font-size: 13px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-family: @font;
+
+            &:last-of-type{
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .bottom{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        background: rgba(0, 0, 0, .2);
+        text-align: center;
+        color: #fff;
+        transform: translateY(30px);
+        transition: 0.2s ease-in-out;
+        &.active{
+            transform: translateY(0);
+        }
+        
+        li{
+            padding: 0 8px;
+            display: inline-block;
+        }
+
+        .val{
+            font-size: 13px;
+            transition: 0.3s;
+        }
+    }
+
+    .link{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:1040px) {
+    #repo{
+        right: 34px;
+        top: -112px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    #repo{
+        width: 80px;
+        .top>.content{
+            display: none;
+        }
+
+        .bottom>li{
+            padding: 0 4px;
+        }
+        .bottom>.date{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    #repo{
+        width: 40px;
+        height: 40px;
+        right: 22px;
+        top: -18px;
+        .loading{
+            width: 30px;
+            height: 30px;
+            margin: -15px 0 0 -15px;
+        }
+        .top{
+            padding: 0;
+            .avatar{
+                margin: 8px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

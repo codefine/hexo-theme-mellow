@@ -7,7 +7,7 @@
             [user, repo] = [ rest[1], rest[2] ];
         });
         if (user && repo) {
-            const url = `http://api.github.com/repos/${user}/${repo}?callback=?`;
+            const url = `//api.github.com/repos/${user}/${repo}?callback=?`;
             $.getJSON(url, (data) => {
                 updateRepoInPage(data.data);
             });

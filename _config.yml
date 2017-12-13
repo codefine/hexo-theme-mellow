@@ -122,6 +122,8 @@ tags_title: Tags              #标签页
 categories_title: Categories  #分类页
 archives_title: Archives      #归档页
 
+# 是否开启文章缩略图，开启请填写图片外链，为了测试这里提供了一张40kb大小的图片，任何尺寸都能保证画质
+defaultthumb: false #https://i.loli.net/2017/12/12/5a2fd18a74471.jpg
 # 自动生成文章摘要
 ## 显示在主页中
 ## excerpt_length只在excerpt_render为true时生效。

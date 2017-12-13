@@ -46,8 +46,8 @@ QQ群：527753185
 
 ## Users
 
-[Liu Forint's blog](https://blog.liufulin.online/)
+[Liu Forint's blog](https://blog.liufulin.online/) - 让你内心强大的唯一方法，就是去寻得那灵的真理！
 
-[逸如风's Blog](http://www.sivan0222.cn/)
+[逸如风's Blog](http://www.sivan0222.cn/) - 未来的小幸运 || 致正在努力的我们--------逸如风
 
 [Peterpan's Blog](http://peterpan980927.cn/)

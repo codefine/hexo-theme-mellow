@@ -43,3 +43,11 @@ Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。
 ## Community
 
 QQ群：527753185
+
+## Users
+
+[Liu Forint's blog](https://blog.liufulin.online/)
+
+[逸如风's Blog](http://www.sivan0222.cn/)
+
+[Peterpan's Blog](http://peterpan980927.cn/)

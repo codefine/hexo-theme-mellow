@@ -18,6 +18,10 @@ less:
 # 站点ico图标
 favicon: /img/favicon.ico
 
+# 头部背景
+# 如/img/avatar.jpg 或 https://i.loli.net/2017/12/12/5a2fd18a74471.jpg
+headerBg: false
+
 # 动态定义title
 #title_change:
   #normal: (つェ⊂)咦!又好了!     #页面获得焦点时显示(短暂存在)

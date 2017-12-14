@@ -110,7 +110,28 @@
         box-shadow: 0 2px 4px saturate(@textPrimaryColorBlack, .3);
     }
 }
-
+#thumb{
+    display: block;
+    width: 100%;
+    border: none;
+    margin-bottom: 8px;
+    // height: 400px;
+    // @media screen and (max-width:1440px) {
+    //     height: 26%;
+    // }
+    // @media screen and (max-width:1080px) {
+    //     height: 30%;
+    // }
+    @media screen and (max-width:1440px) {
+        height: 400px;
+    }
+    @media screen and (max-width:720px) {
+        height: 280px;
+    }
+    @media screen and (max-width:500px) {
+        height: 200px;
+    }
+}
 .post-more {
     width: 50px;
     margin: 10px auto 0;

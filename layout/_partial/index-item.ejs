@@ -12,6 +12,14 @@
         <%- partial('post/repo-icon') %>
         <%- partial('post/music') %>
     </div>
+    
+    <% if (theme.defaultthumb && !post.src) { %>
+        <%- partial('post/thumb',{src: theme.defaultthumb}) %>
+        <% } %>
+    <% if (post.src) { %>
+        <%- partial('post/thumb',{src:post.src }) %>
+        <% } %>
+    
     <div class="post-content" id="post-content" itemprop="postContent">
     <%
         // 首页缩略图大小及路径处理

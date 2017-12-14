@@ -1,1 +1,6 @@
+<%
+    if ( !/http/g.test(src) ) { // 路径适配
+        src = url_for(post.path) + src;
+    }
+%>
 <img src="<%= src %>"  id="thumb" alt="">

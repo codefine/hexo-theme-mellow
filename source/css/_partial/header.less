@@ -5,14 +5,11 @@
     width: 100%;
     color: @textPrimaryColorWhite;
     height: @headerH;
-    background: @primaryColor_1;
-    -webkit-transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
-    transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
+    .transition(0.2s);
     z-index: 30;
-
     &.fixed {
         box-shadow: @boxShadow;
-
+        background: fade(@primaryColor_1, 50%);
         .header-title {
             visibility: visible;
         }

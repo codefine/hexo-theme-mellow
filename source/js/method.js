@@ -135,8 +135,9 @@ $.extend({
 	},
 	fixedHeader: function (top) {
 		var header = $('#header');
-		headerH = header.height();
-		if (top > headerH) {
+		var targetHeight = $('.content-header').outerHeight() - header.outerHeight();
+		// headerH = header.height();
+		if (top > targetHeight) {
 			header.addClass('fixed');
 		} else {
 			header.removeClass('fixed');

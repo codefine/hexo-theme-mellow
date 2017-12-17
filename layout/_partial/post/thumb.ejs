@@ -10,9 +10,10 @@
     }
 %>
 <div class="item-thumb">
-    <a href="<%- url_for(post.path) %>"></a>
+    <a class="thumb-link" href="<%- url_for(post.path) %>"></a>
     <div class="thumb-hover">
         <span class="icon icon-eye"></span>
     </div>
     <img src="<%= src %>" alt="图片路径不正确">
+    <%- partial('title', { hasLink: true, tClass: "ab-title" }) %>
 </div>

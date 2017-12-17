@@ -1,15 +1,17 @@
 .post-widget {
-    width: 180px;
+    width: @asideW - 10px;
     position: absolute;
-    right: @tocR;
-    top: @headerH + 10px;
+    right: -28%;
+    top: @headerH - 80px;
     &.fixed {
         position: fixed;
+        right: 3%;
         top: @topBarH + 10px;
     }
 }
 
 .post-article {
+    width: 90%;
     position: relative;
     .transition(0s);
 
@@ -33,7 +35,15 @@
 
 @media screen and (max-width: 1040px) {
 	.post-widget {
-	    display: none;
+	    width: @asideW - 90px;
+        // position: absolute;
+        right: -28%;
+        // top: @headerH - 80px;
+        &.fixed {
+            // position: fixed;
+            right: 3.5%;
+            // top: @topBarH + 10px;
+        }
     }
     .post-article {
         width: 100%;
@@ -520,7 +530,7 @@
 
     .post-card {
         position: relative;
-        margin: -20px -16px 0;
+        margin: 0 -16px;
         border-radius: 0;
         padding: 16px;
 

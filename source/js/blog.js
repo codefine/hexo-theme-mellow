@@ -31,6 +31,7 @@ $.BLOG = {
 	},
 	toc: function() {
 		var toc = $('#post-toc');
+		var repo = $('#repo');
 		return {
 			scroll: function(top) {
 				if (!toc.length) return;
@@ -38,7 +39,7 @@ $.BLOG = {
 				$.toc().actived(top);
 			},
 			go: function() {
-				if (!toc.length) {
+				if (!toc.length && !repo.length) {
 					$('.post-article').css("width", "100%");
 					return;
 				};

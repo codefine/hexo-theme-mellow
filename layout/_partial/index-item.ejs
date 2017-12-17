@@ -9,7 +9,9 @@
     <% if (theme.top_icon && post.top) { %>
     <%- partial('post/top') %>
     <% } %>
-    <%- partial('post/title', { hasLink: true }) %>
+    <% if (!theme.defaultthumb) {%>
+        <%- partial('post/title', { hasLink: true, tClass: "re-title" }) %>
+    <% } %>
     <div class="post-meta">
         <%- partial('post/date', {date_format: config.date_format}) %>
         <%- partial('post/category') %>

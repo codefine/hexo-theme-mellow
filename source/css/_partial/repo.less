@@ -1,13 +1,13 @@
 #repo{
-    width: 200px;
-    height: 100px;
+    width: @asideW;
+    height: @asideW / 2;
     background: @githubCardColor;
     border-radius: 4px;
     position: absolute;
     overflow: hidden;
     cursor: pointer;
-    right: @tocR;
-    top: @headerH - 110px;
+    right: -28%;
+    top: 14px;
     .boxShadow();
     z-index: 2;
     p{
@@ -107,16 +107,18 @@
     }
 }
 
+// @media screen and (max-width:1040px) {
+//     #repo{
+//         right: 34px;
+//         top: 140px;
+//     }
+// }
+
 @media screen and (max-width:1040px) {
     #repo{
-        right: 34px;
-        top: 140px;
-    }
-}
-
-@media screen and (max-width:992px) {
-    #repo{
         width: 80px;
+        right: -24%;
+        // right: -@asideW + 60px;
         .top>.content{
             display: none;
         }
@@ -134,8 +136,8 @@
     #repo{
         width: 40px;
         height: 40px;
-        right: 22px;
-        top: 200px;
+        right: 8px;
+        top: -18px;
         .loading{
             width: 30px;
             height: 30px;

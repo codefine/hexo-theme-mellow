@@ -5,7 +5,8 @@
       <%- partial("post/category", { post: post }) %>
     </div>
     <%- partial("post/title", {
-        hasLink: true
+        hasLink: true,
+        tClass: ""
       }) %>
     <% if(post.tags && post.tags.length){ %>
     <div class="post-footer">

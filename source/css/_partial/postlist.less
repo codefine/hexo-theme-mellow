@@ -2,7 +2,6 @@
     padding: 0;
     list-style: none;
     .post-list-item {
-        min-height: @thumbH;
         .card();
         .boxShadow();
         padding: 0;
@@ -36,21 +35,26 @@
 
 
 .post-title {
-    margin: 0;
-    text-align: center;
-    position: absolute;
-    left: 0;
-    top: 260px;
-    line-height: 40px;
-    background: rgba(0, 0, 0, .4);
-    width: 100%;
-    z-index: 1;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    .post-title-link{
-        color: @textPrimaryColorWhite;
+    &.re-title{
+        margin-bottom: 10px;
+        position: relative;
+        .post-title-link{
+            color: @primaryColor_1;
+        }
     }
+    &.ab-title{
+        margin: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: auto;
+        background: rgba(0, 0, 0, .4);
+        .post-title-link{
+            color: @textPrimaryColorWhite;
+        }
+    }
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -154,7 +158,7 @@
 }
 .item-thumb{
     width: calc(~"100% + 40px");
-    height: @thumbH;
+    // height: @thumbH;
     margin-bottom: 8px;
     position: relative;
     left: -20px;
@@ -166,16 +170,6 @@
         border-radius: 3px 3px 0 0 @imp;
         display: block;
         width: 100%;
-        height: 100%;
-    }
-
-    a{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 2;
     }
     
     .thumb-hover{
@@ -197,6 +191,15 @@
             top: 50%;
             .transform(translate(-50%, -50%));
         }
+    }
+
+    .thumb-link{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
     }
 
     &:hover{
@@ -265,7 +268,6 @@
 @media screen and (max-width:760px) {
     .post-title {
         font-size: @font-size + 6;
-        line-height: 24px;
     }
     .post-more {
         height: 28px;

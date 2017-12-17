@@ -36,6 +36,8 @@ $.extend({
 		toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active');
 		return {
 			fixed: function (top) {
+				console.log(top)
+				console.log(bannerH - headerH)
 				if (top > bannerH - headerH) {
 					// toc.css('top', headerH + offset);
 					toc.addClass('fixed');
@@ -143,7 +145,6 @@ $.extend({
 	fixedHeader: function (top) {
 		var header = $('#header');
 		var targetHeight = $('.content-header').outerHeight() - header.outerHeight();
-		// headerH = header.height();
 		if (top > targetHeight) {
 			header.addClass('fixed');
 		} else {

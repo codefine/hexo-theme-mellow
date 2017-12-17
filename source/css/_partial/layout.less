@@ -16,7 +16,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    z-index: 66;
+    z-index: 99;
     width: @menuWidth;
     min-height: 100%;
     background: #fff;
@@ -39,12 +39,26 @@
     }
 
     .brand-wrap {
+        position: relative;
         background-size: 100% 100%;
+        background: fade(@primaryColor_1, 50%);
+    }
+
+    .brand-bg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
     }
 
     .brand {
+        position: relative;
+        left: 0;
+        top: 0;
+        z-index: 2;
         padding: 40px @menuPadding 2em;
-        background: fade(@primaryColor_1, 50%);
         text-align: center;
     }
 
@@ -55,23 +69,28 @@
         border: 2px solid #fff;
         border-radius: 50%;
         overflow: hidden;
-        box-shadow: @boxShadow;
+        .boxShadow();
     }
 
     .introduce {
         margin: 1em 0 0;
-        color: @textPrimaryColorWhite;
+        color: @primaryColor_1;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
     }
 
     .mail {
         display: inline-block;
         padding-top: 4px;
-        color: @lightPrimaryColor;
-        font-size: @font-size - 2;
+        color: @primaryColor_1;
+        font-size: 0;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
         .transition(0.4s);
         &:hover{
             color: @primaryColor_2;
             text-decoration: none;
+        }
+        span{
+            font-size: @font-size - 2;
         }
     }
 
@@ -92,6 +111,7 @@
 
         li {
             padding: 0 @menuPadding;
+            position: relative;
             text-indent: 22px;
             .transition(0.4s);
 
@@ -135,13 +155,14 @@
         padding: 0;
         text-align: center;
         line-height: 20px;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
         li{
             margin: 0 2px;
             list-style: none;
             display: inline-block;
             
             a{
-                color: @textSecondaryColor;
+                color: @textPrimaryColorBlack;
                 .transition(0.4s);
             }
 
@@ -164,7 +185,7 @@
 }
 
 .container {
-    width: 90%;
+    width: @homeW;
     margin: 0 auto;
 
     &:after {
@@ -264,7 +285,7 @@
 @media screen and (max-width:1040px) {
     .container {
         width: 100%;
-        padding: 20px 16px;
+        padding: 30px 16px 0;
     }
     .content-header .container:first-child{
         padding-left: 0;

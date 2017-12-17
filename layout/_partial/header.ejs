@@ -20,7 +20,10 @@
         <% } %>
     </div>
 </header>
-<header class="content-header <%- hdClass %>" style="background-image: url(<%= theme.headerBg %>)">
+<header class="content-header <%- hdClass %>">
+    <%- fragment_cache('bg', function(){
+        return `<img src="${theme.headerBg}" class="header-bg">`;
+    }) %>
     <div class="container fade-scale">
         <h1 class="title"><%= title %></h1>
         <h5 class="subtitle">
@@ -41,7 +44,7 @@
             contentsLen = (contentsLen / 1000).toFixed(1);
         %>
         <div class="remind">
-            <p>总计文章(<span><%= postsLen %></span>)篇，约(<span><%= contentsLen %>K</span>)字</p>
+            <p>总计文章( <span><%= postsLen %></span> )篇，约( <span><%= contentsLen %>K</span> )字</p>
             <p>Keep moving😎!!!</p>
         </div>
         <% } %>

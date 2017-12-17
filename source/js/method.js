@@ -26,11 +26,13 @@ $.extend({
 	},
 	toc: function (toc) {
 		var toc = $('.post-widget');
+		var tocBar = $('.toc-bar');
 		var bannerH = $('.post-header').outerHeight();
 		var headerH = $('#header').outerHeight();
-		var titles = $('#post-content').find('h1, h2, h3, h4, h5, h6');
+		var titles = $('#post-content').find('h1, h2, h3, h4');
 		var scrollTop = $(document).scrollTop();
-		var offset = $(document).width() - toc.offset().left - toc.outerWidth();
+		// var offset = 10;
+		// var offset = $(document).width() - toc.offset().left - toc.outerWidth();
 		toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active');
 		return {
 			fixed: function (top) {
@@ -42,32 +44,37 @@ $.extend({
 				}
 			},
 			actived: function (top) {
-				titles.each(function () {
-					var plug = $(this).css('marginBottom');
-					if (top > $(this).offset().top - headerH) {
-						toc.find('li.active').removeClass('active');
-						var active = toc.find('a[href="#' + $(this).attr('id') + '"]').parents('.post-toc-item');
-						active.addClass('active');
+				var target;
+				titles.each(function (i, elem) {
+					if (top > $(elem).offset().top - headerH) {
+						target = toc.find('a[href="#' + $(elem).attr('id') + '"]').parent();
 					}
 				});
+				if (target) {
+					toc.find('li.active').removeClass('active');
+					target.addClass('active');
+					target.parents('.post-toc-item').addClass('active');
+					tocBar.css("top", target.position().top);
+				}
 				if (top < titles.eq(0).offset().top) {
 					toc.find('li.active').removeClass('active');
 					var active = toc.find('a[href="#' + titles.eq(0).attr('id') + '"]').parent();
 					active.addClass('active');
+					tocBar.css("top", active.position().top);
 				}
 			},
 			go: function () {
-				toc.delegate('a', 'click', function (e) {
+				toc.delegate('.post-toc-item', 'click', function (e) {
 					e.preventDefault();
-					var id = $(this).attr('href').replace(/^\#/, '');;
-					var titles = $('#post-content').find('h1, h2, h3, h4, h5, h6');
-					var offset = 10;
+					e.stopPropagation();
+					var id = $(this).children(".post-toc-link").attr('href').replace(/^\#/, '');
+					var titles = $('#post-content').find('h1, h2, h3, h4');
 					titles.each(function (i, el) {
 						if ($(this).attr('id') === id) {
 							var top = $(this).offset().top;
 							$('body,html').stop(true, false);
 							$('body,html').animate({
-								scrollTop: top - offset
+								scrollTop: top
 							}, 300);
 						}
 					});

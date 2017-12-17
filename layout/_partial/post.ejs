@@ -30,9 +30,6 @@
         <% } %>
     </div>
     <%- partial('post/nav') %>
-    <% if (post.repo) { %>
-        <%- partial('post/repo') %>
-    <% } %>
 </article>
 <% if (post.reward || typeof post.reward === "undefined") {
     if (theme.reward.alipay || theme.reward.wechat) { %>

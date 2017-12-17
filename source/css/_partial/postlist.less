@@ -1,23 +1,62 @@
 .post-list {
     padding: 0;
-    margin: 0 -12px;
     list-style: none;
+    .post-list-item {
+        min-height: @thumbH;
+        .card();
+        .boxShadow();
+        padding: 0;
+        margin-bottom: 30px;
+        position: relative;
+
+        .article-card{
+            position: relative;
+            box-shadow: none;
+        }
+    
+        .post-footer {
+            margin: 0;
+            padding: 12px 20px 8px;
+        }
+    }
 }
 
 .post-list-item {
+    .card();
+    .boxShadow();
     padding: 0 12px;
     margin-bottom: 30px;
     position: relative;
+    overflow: hidden;
+    .post-footer {
+        margin: 0;
+        padding: 12px 20px 8px;
+    }
 }
 
+
 .post-title {
-    margin: 0 0 16px;
+    margin: 0;
     text-align: center;
+    position: absolute;
+    left: 0;
+    top: 260px;
+    line-height: 40px;
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    z-index: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    .post-title-link{
+        color: @textPrimaryColorWhite;
+    }
 }
 
 
 .post-title-link {
     color: @primaryColor_1;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     .hoverLine(@primaryColor_2);
     &:hover{
         color: @primaryColor_2;
@@ -31,11 +70,14 @@
     font-size: @font-size - 2;
     font-weight: bold;
     color: @textSecondaryColor;
+    position: relative;
+    z-index: 1;
     overflow: hidden;
     >*:not(:first-child) {
         &:before {
             content: "·";
             padding: 0 .5em;
+            white-space: nowrap;
         }
     }
 }
@@ -77,22 +119,22 @@
     display: inline-block;
     margin: 0 8px 8px 0;
     border-radius: 2px;
-    &:nth-child(n+1) {
+    &:nth-of-type(6n+1) {
         background: @tag-color-1
     }
-    &:nth-child(n+2) {
+    &:nth-of-type(6n+2) {
         background: @tag-color-2
     }
-    &:nth-child(n+3) {
+    &:nth-of-type(6n+3) {
         background: @tag-color-3
     }
-    &:nth-child(n+4) {
+    &:nth-of-type(6n+4) {
         background: @tag-color-4
     }
-    &:nth-child(n+5) {
+    &:nth-of-type(6n+5) {
         background: @tag-color-5
     }
-    &:nth-child(n+6) {
+    &:nth-of-type(6n+6) {
         background: @tag-color-6
     }
 }
@@ -110,26 +152,57 @@
         box-shadow: 0 2px 4px saturate(@textPrimaryColorBlack, .3);
     }
 }
-#thumb{
-    display: block;
-    width: 100%;
-    border: none;
+.item-thumb{
+    width: calc(~"100% + 40px");
+    height: @thumbH;
     margin-bottom: 8px;
-    // height: 400px;
-    // @media screen and (max-width:1440px) {
-    //     height: 26%;
-    // }
-    // @media screen and (max-width:1080px) {
-    //     height: 30%;
-    // }
-    @media screen and (max-width:1440px) {
-        height: 400px;
+    position: relative;
+    left: -20px;
+    top: -16px;
+    border-radius: 3px 3px 0 0 @imp;
+    overflow: hidden;
+    
+    img{
+        border-radius: 3px 3px 0 0 @imp;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
-    @media screen and (max-width:720px) {
-        height: 280px;
+
+    a{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
     }
-    @media screen and (max-width:500px) {
-        height: 200px;
+    
+    .thumb-hover{
+        width: 100%;
+        height: 100%;
+        color: @textSecondaryColor;
+        font-size: @font-size + 30;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        transition: 0.4s;
+        background: fade( @thumbHoverColor, 50% );
+        opacity: 0;
+        
+        .icon{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            .transform(translate(-50%, -50%));
+        }
+    }
+
+    &:hover{
+        .thumb-hover{
+            opacity: 1;
+        }
     }
 }
 .post-more {
@@ -148,6 +221,10 @@
         color: @textPrimaryColorWhite @imp;
         background: @primaryColor_2;
     }
+}
+.leancloud-comment,
+.leancloud_visitors{
+    display: inline-block;
 }
 
 #page-nav {
@@ -174,8 +251,8 @@
     a {
         &:hover,
         &:active {
-            color: @primaryColor_1;
-            background: @primaryColor_1;
+            color: #fff;
+            background: @primaryColor_2;
         }
     }
 
@@ -194,9 +271,6 @@
         height: 28px;
         line-height: 28px;
         font-size: @font-size - 2;
-    }
-    .post-list {
-        margin: 0 -16px
     }
     .post-list-item {
         padding: 0;

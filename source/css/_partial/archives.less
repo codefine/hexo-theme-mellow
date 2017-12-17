@@ -12,9 +12,12 @@
 .article-card {
     padding: 16px 20px 0;
     .card();
+    .boxShadow();
 
     .post-content {
         word-break: break-word;
+        position: relative;
+        z-index: 1;
 
         .highlight,
         > pre {
@@ -41,7 +44,8 @@
         height: @topSize;
         position: absolute;
         top: 0;
-        right: 12px;
+        right: 0;
+        z-index: 1;
         .top-wrap{
             width: @topSize;
             height: @topSize;
@@ -78,6 +82,17 @@
         margin-bottom: 0;
         padding-bottom: 16px;
         text-align: left;
+        position: relative;
+        left: 0;
+        top: 0;
+        background: initial;
+        line-height: 32px;
+        text-overflow: initial;
+        overflow: initial;
+        white-space: initial;
+        .post-title-link{
+            color: @primaryColor_1;
+        }
     }
 }
 .waterfall {

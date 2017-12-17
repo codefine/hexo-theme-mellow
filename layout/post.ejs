@@ -8,4 +8,7 @@ page.reward = 'reward' in page ? (theme.reward && page.reward) : theme.reward
 <div class="container body-wrap">
     <%- partial('_partial/post', {post: page }) %>
 </div>
+<% if (page.repo) { %>
+    <%- partial('_partial/post/repo') %>
+<% } %>
 <%- partial('_partial/post/toc', { post: page}) %>

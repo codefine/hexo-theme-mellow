@@ -6,10 +6,10 @@
     position: absolute;
     overflow: hidden;
     cursor: pointer;
-    right: 18px;
-    top: -102px;
+    right: @tocR;
+    top: @headerH - 110px;
     .boxShadow();
-
+    z-index: 2;
     p{
         margin: 0;
     }
@@ -110,7 +110,7 @@
 @media screen and (max-width:1040px) {
     #repo{
         right: 34px;
-        top: -112px;
+        top: 140px;
     }
 }
 
@@ -135,7 +135,7 @@
         width: 40px;
         height: 40px;
         right: 22px;
-        top: -18px;
+        top: 200px;
         .loading{
             width: 30px;
             height: 30px;

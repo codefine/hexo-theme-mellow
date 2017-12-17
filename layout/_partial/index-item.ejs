@@ -1,5 +1,11 @@
 <article id="<%= post.layout %>-<%= post.slug %>"
   class="article-card article-type-<%= post.layout %>" itemprop="blogPost">
+  <% if (theme.defaultthumb && !post.src) { %>
+        <%- partial('post/thumb', {src: theme.defaultthumb, total: total}) %>
+        <% } %>
+    <% if (post.src) { %>
+        <%- partial('post/thumb', {src: post.src, total: total}) %>
+        <% } %>
     <% if (theme.top_icon && post.top) { %>
     <%- partial('post/top') %>
     <% } %>
@@ -12,13 +18,6 @@
         <%- partial('post/repo-icon') %>
         <%- partial('post/music') %>
     </div>
-    
-    <% if (theme.defaultthumb && !post.src) { %>
-        <%- partial('post/thumb',{src: theme.defaultthumb}) %>
-        <% } %>
-    <% if (post.src) { %>
-        <%- partial('post/thumb',{src: post.src }) %>
-        <% } %>
     
     <div class="post-content" id="post-content" itemprop="postContent">
     <%
@@ -40,13 +39,10 @@
             length: theme.excerpt_length
         }) %>
     <% } %>
-        <a href="<%- url_for(post.path) %>" class="post-more waves-effect waves-button">
-            <%- theme.excerpt_link %>
-        </a>
     </div>
-    <% if(post.tags && post.tags.length){ %>
-    <div class="post-footer">
-        <%- partial('post/tag') %>
-    </div>
-    <% } %>
 </article>
+<% if(post.tags && post.tags.length){ %>
+<div class="post-footer">
+    <%- partial('post/tag') %>
+</div>
+<% } %>

@@ -1,16 +1,17 @@
 <% if(theme.toc.enable){
-    var topic = toc(post.content, {
+    // const res = post.content.replace(/<a\shref\=\".+\"\sclass\=\"headerlink\"\stitle\=\".+\"\>\<\/a>/g, "");
+    const topic = toc(trim(post.content), {
             class: 'post-toc',
             list_number: theme.toc.list_number,
-            max_depth: 2
+            max_depth: 4
         })
-    if(topic) {
-    %>
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>TOC</h4>
-            <%- topic %>
-        </nav>
-    </aside>
+    if (topic) { %>
+        <aside class="post-widget">
+            <nav class="post-toc-wrap" id="post-toc">
+                <strong>目录</strong>
+                <%- topic %>
+            </nav>
+            <div class="toc-bar"><div>
+        </aside>
     <% }
 } %>

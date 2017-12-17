@@ -1,5 +1,5 @@
 # hexo-theme-mellow
-# https://github.com/codefine/hexo-theme-mellow
+# https://github.com/yscoder/hexo-theme-indigo
 # 为了避免未知解析错误，配置中的缩紧为2个半角空格，冒号后跟1个半角空格
 # 不需要的配置可以注释掉，也可以修改对应键布尔值(enable和disable)
 
@@ -20,7 +20,7 @@ favicon: /img/favicon.ico
 
 # 头部背景
 # 如/img/avatar.jpg 或 https://i.loli.net/2017/12/12/5a2fd18a74471.jpg
-headerBg: false
+headerBg: /img/banner.jpg
 
 # 动态定义title
 #title_change:
@@ -46,7 +46,7 @@ avatar: /img/avatar.jpg
 avatar_link: / #默认为主页
 
 # 头像区域背景图
-brand: /
+brand: /img/brand.png
 
 # 电子邮件
 email: 277133779@qq.com
@@ -127,7 +127,7 @@ categories_title: Categories  #分类页
 archives_title: Archives      #归档页
 
 # 主页文章摘要缩略图
-defaultthumb: false #https://i.loli.net/2017/12/12/5a2fd18a74471.jpg
+defaultthumb: true
 
 # 自动生成文章摘要
 ## 显示在主页中
@@ -135,7 +135,6 @@ defaultthumb: false #https://i.loli.net/2017/12/12/5a2fd18a74471.jpg
 ## excerpt_render为false时可进行手动截断。方法为在文章的markdown文件中加入<!--more-->，其之前的内容视为摘要部分。
 excerpt_render: false   #自动截断
 excerpt_length: 200     #截断长度
-excerpt_link: more...   #按钮内容
 
 # 是否显示文章最后更新时间
 ## 位于文章底部的copyright
@@ -182,14 +181,14 @@ toc:
 # 友情链接
 blogroll:
   item1:
-    name: github
-    url: https://www.github.com
-  item2:
-    name: gitee
-    url: https://www.gitee.com
-  item3:
-    name: coding
-    url: https://www.coding.net
+    name: HOME
+    url: https://www.lujingtao.com
+  #item2:
+    #name: gitee
+    #url: https://www.gitee.com
+  #item3:
+    #name: coding
+    #url: https://www.coding.net
 
 # 版权起始年份
 since_year: 2017
@@ -222,19 +221,19 @@ baidu_tongji: #appid
 # valine评论系统
 ## https://valine.js.org/
 valine:
-  enable: true
-  appid: # appid
-  appkey: # appkey
-  notify: false  #是否开启邮箱提醒
-  verify: false  #是否开启验证码
+  enable: false
+  appid: #appid
+  appkey: #appkey
+  notify: true  #是否开启邮箱提醒
+  verify: true  #是否开启验证码
   placeholder: give me some sugers plz... #留言板中的预留信息
   avatar: 'wavatar'  #用户头像
 
 # 文章浏览统计
 leancloud_visitors:
-  enable: true
-  app_id: # appid
-  app_key: # appkey
+  enable: false
+  app_id: #appid
+  app_key: #appkey
   icon: true #true只显示图标，false只显示文字
 
 # 数学公式

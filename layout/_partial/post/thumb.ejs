@@ -1,6 +1,18 @@
 <%
-    if ( !/http/g.test(src) ) { // 路径适配
-        src = url_for(post.path) + src;
+    if ( _.isBoolean(src) ) {
+        const len = 10;
+        src = url_for( `/img/thumb/${ ( (total - index - 1) % total ) % len + 1 }.jpg` );
+    } else if ( _.isString(src) ) {
+        src = url_for(src);
+    } else if ( _.isArray(src) ) {
+        const len = src.length;
+        src = url_for( `/img/thumb/${ ( (total - index - 1) % total ) % len + 1 }.jpg` );
     }
 %>
-<img src="<%= src %>"  id="thumb" alt="">
+<div class="item-thumb">
+    <a href="<%- url_for(post.path) %>"></a>
+    <div class="thumb-hover">
+        <span class="icon icon-eye"></span>
+    </div>
+    <img src="<%= src %>" alt="图片路径不正确">
+</div>

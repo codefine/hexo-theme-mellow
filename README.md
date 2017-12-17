@@ -46,6 +46,8 @@ QQ群：527753185
 
 ## Users
 
+> 下方陈列长期使用mellow主题的博客地址，不定期更新。需要的话请提交issue并附上博客的在线地址。
+
 [Liu Forint's blog](https://blog.liufulin.online/) - 让你内心强大的唯一方法，就是去寻得那灵的真理！
 
 [逸如风's Blog](http://www.sivan0222.cn/) - 未来的小幸运 || 致正在努力的我们--------逸如风

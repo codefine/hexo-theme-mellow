@@ -9,6 +9,8 @@ hexo-theme-mellow
 
 Material Design 风格的Hexo主题，基于 **Hexo 3.0+** & **Node 7.x+** 制作。 **已经被Hexo官方收录**。
 
+> TODO: Internationalization
+
 ## Feature
 
 1. 全端响应式主题。

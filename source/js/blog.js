@@ -39,7 +39,7 @@ $.BLOG = {
 				$.toc().actived(top);
 			},
 			go: function() {
-				if (!toc.length && !repo.length) {
+				if (!toc.length || !repo.length) {
 					$('.post-article').css("width", "100%");
 					return;
 				};

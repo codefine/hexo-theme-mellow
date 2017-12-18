@@ -31,17 +31,16 @@ $.extend({
 		var headerH = $('#header').outerHeight();
 		var titles = $('#post-content').find('h1, h2, h3, h4');
 		var scrollTop = $(document).scrollTop();
-		// var offset = 10;
-		// var offset = $(document).width() - toc.offset().left - toc.outerWidth();
-		toc.find('a[href="#' + titles[0].id + '"]').parent().addClass('active');
+		var card = $('.post-card');
 		return {
 			fixed: function (top) {
-				console.log(top)
-				console.log(bannerH - headerH)
-				if (top > bannerH - headerH) {
-					// toc.css('top', headerH + offset);
+				if (top >= bannerH - headerH) {
+					toc.css({
+						'left': card.offset().left + card.outerWidth(true) + 40
+					});
 					toc.addClass('fixed');
 				} else {
+					toc.css('left', "");
 					toc.removeClass('fixed');
 				}
 			},

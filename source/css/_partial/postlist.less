@@ -2,6 +2,9 @@
     padding: 0;
     list-style: none;
     .post-list-item {
+        margin-left: auto;
+        margin-right: auto;
+        width: @homeW;
         .card();
         .boxShadow();
         padding: 0;
@@ -46,9 +49,8 @@
         margin: 0;
         position: absolute;
         left: 0;
-        bottom: 0;
+        bottom: 10px;
         height: auto;
-        background: rgba(0, 0, 0, .4);
         .post-title-link{
             color: @textPrimaryColorWhite;
         }
@@ -274,8 +276,11 @@
         line-height: 28px;
         font-size: @font-size - 2;
     }
-    .post-list-item {
-        padding: 0;
-        margin-bottom: 16px;
+    .post-list{
+        .post-list-item {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 16px;
+        }
     }
 }

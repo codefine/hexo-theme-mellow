@@ -1,19 +1,18 @@
 .post-widget {
     width: @asideW - 10px;
     position: absolute;
-    right: -28%;
-    top: @headerH - 80px;
+    right: -@asideW - 30px;
+    top: -@postOffsetY + 10px;
     &.fixed {
+        .transition(0.2s);
         position: fixed;
-        right: 3%;
         top: @topBarH + 10px;
     }
 }
 
 .post-article {
-    width: 90%;
+    width: calc( ~"100% - 200px" );
     position: relative;
-    .transition(0s);
 
     .card {
         padding: 20px;
@@ -35,13 +34,14 @@
 
 @media screen and (max-width: 1040px) {
 	.post-widget {
-	    width: @asideW - 90px;
+        display: none;
+	    // width: 0;
         // position: absolute;
-        right: -28%;
+        // right: -28%;
         // top: @headerH - 80px;
         &.fixed {
             // position: fixed;
-            right: 3.5%;
+            // right: 3.5%;
             // top: @topBarH + 10px;
         }
     }
@@ -114,7 +114,7 @@
     }
 }
 .post-card {
-    margin-top: -150px;
+    margin-top: @postOffsetY;
     min-height: 100px;
     padding: 35px;
     background: #fff;

@@ -14,7 +14,6 @@ hexo.extend.helper.register('theme_js', (path, cache) => source(path, cache, '.j
 hexo.extend.helper.register('theme_css', (path, cache) => source(path, cache, '.css'))
 
 hexo.extend.tag.register('image', ([src, alt = '', title = '', imgClass = '']) => {
-    // console.log(src)
     return `<figure class="image-box">
                 <img src="${src}" alt="${alt}" title="${title}" class="${imgClass}">
                 <p>${title || alt}</p>

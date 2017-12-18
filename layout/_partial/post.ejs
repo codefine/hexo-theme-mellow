@@ -1,5 +1,5 @@
 <article id="<%= post.layout %>-<%= post.slug %>"
-  class="post-article article-type-<%= post.layout %> fade" itemprop="blogPost">
+  class="post-article article-type-<%= post.layout %>" itemprop="blogPost">
     <div class="post-card">
         <h1 class="post-card-title"><%- post.title %></h1>
         <div class="post-meta">
@@ -30,6 +30,10 @@
         <% } %>
     </div>
     <%- partial('post/nav') %>
+    <% if (page.repo) { %>
+        <%- partial('post/repo') %>
+    <% } %>
+    <%- partial('post/toc', { post: page}) %>
 </article>
 <% if (post.reward || typeof post.reward === "undefined") {
     if (theme.reward.alipay || theme.reward.wechat) { %>

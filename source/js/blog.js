@@ -2,8 +2,10 @@ $.BLOG = {
 	init: function() {
 		this.basic();
 		this.menu();
-		this.toc().scroll(0);
-		this.toc().go();
+		setTimeout(function(THIS) {
+			THIS.toc().scroll( $(window).scrollTop() );
+			THIS.toc().go();
+		}, 500, this);
 		this.scroll();
 		this.resize();
 		this.goTop().active();
@@ -39,7 +41,7 @@ $.BLOG = {
 				$.toc().actived(top);
 			},
 			go: function() {
-				if (!toc.length || !repo.length) {
+				if (!toc.length && !repo.length) {
 					$('.post-article').css("width", "100%");
 					return;
 				};

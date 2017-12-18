@@ -74,7 +74,6 @@
     margin: 0 0 10px;
     line-height: 14px;
     font-size: @font-size - 2;
-    font-weight: bold;
     color: @textSecondaryColor;
     position: relative;
     z-index: 1;
@@ -125,24 +124,35 @@
     display: inline-block;
     margin: 0 8px 8px 0;
     border-radius: 2px;
-    &:nth-of-type(6n+1) {
-        background: @tag-color-1
+    // color: @primaryColor_2;
+    border: 1px dotted @primaryColor_2;
+    .transition(.2s);
+    &:hover {
+        border-style: solid;
+        box-shadow: @boxShadow;
+        background: @primaryColor_2;
+        .article-tag-list-link{
+            color: @textPrimaryColorWhite;
+        }
     }
-    &:nth-of-type(6n+2) {
-        background: @tag-color-2
-    }
-    &:nth-of-type(6n+3) {
-        background: @tag-color-3
-    }
-    &:nth-of-type(6n+4) {
-        background: @tag-color-4
-    }
-    &:nth-of-type(6n+5) {
-        background: @tag-color-5
-    }
-    &:nth-of-type(6n+6) {
-        background: @tag-color-6
-    }
+    // &:nth-of-type(6n+1) {
+    //     background: @tag-color-1
+    // }
+    // &:nth-of-type(6n+2) {
+    //     background: @tag-color-2
+    // }
+    // &:nth-of-type(6n+3) {
+    //     background: @tag-color-3
+    // }
+    // &:nth-of-type(6n+4) {
+    //     background: @tag-color-4
+    // }
+    // &:nth-of-type(6n+5) {
+    //     background: @tag-color-5
+    // }
+    // &:nth-of-type(6n+6) {
+    //     background: @tag-color-6
+    // }
 }
 
 
@@ -150,13 +160,9 @@
     display: block;
     padding: 0 16px;
     line-height: 28px;
-    color: saturate(@textPrimaryColorWhite, .8);
-    font-weight: bold;
+    // color: saturate(@textPrimaryColorWhite, .8);
+    color: @primaryColor_2;
     .transition(.2s);
-    &:hover {
-        color: @textPrimaryColorWhite;
-        box-shadow: 0 2px 4px saturate(@textPrimaryColorBlack, .3);
-    }
 }
 .item-thumb{
     width: calc(~"100% + 40px");

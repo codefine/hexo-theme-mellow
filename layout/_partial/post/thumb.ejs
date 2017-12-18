@@ -3,7 +3,7 @@
         const len = 10;
         src = url_for( `/img/thumb/${ ( (total - index - 1) % total ) % len + 1 }.jpg` );
     } else if ( _.isString(src) ) {
-        src = url_for(src);
+        src = src[0] === "/" ? url_for(src) : url_for(post.path) + url_for(src);
     } else if ( _.isArray(src) ) {
         const len = src.length;
         src = url_for( `/img/thumb/${ ( (total - index - 1) % total ) % len + 1 }.jpg` );

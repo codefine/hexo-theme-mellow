@@ -9,7 +9,7 @@
     <% if (theme.top_icon && post.top) { %>
     <%- partial('post/top') %>
     <% } %>
-    <% if (!theme.defaultthumb) {%>
+    <% if (!theme.defaultthumb && !post.src) {%>
         <%- partial('post/title', { hasLink: true, tClass: "re-title" }) %>
     <% } %>
     <div class="post-meta">

@@ -54,6 +54,8 @@ QQ群：527753185
 
 [逸如风's Blog](http://www.sivan0222.cn/) - 未来的小幸运 || 致正在努力的我们--------逸如风
 
-[Twor Blog](http://blog.bantwor.com/)
+[Twor Blog](http://blog.bantwor.com/) - http://blog.bantwor.com/
 
 [养码青年](https://runzhenghengbin.github.io/) - 曾经养鱼，现在养码
+
+[Live Better](http://int0x03.cc/) - http://int0x03.cc/

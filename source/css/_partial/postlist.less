@@ -4,7 +4,7 @@
     .post-list-item {
         margin-left: auto;
         margin-right: auto;
-        width: @homeW;
+        max-width: @homeW;
         .card();
         .boxShadow();
         padding: 0;
@@ -51,6 +51,7 @@
         left: 0;
         bottom: 10px;
         height: auto;
+        z-index: 1;
         .post-title-link{
             color: @textPrimaryColorWhite;
         }
@@ -123,36 +124,40 @@
 .article-tag-list-item {
     display: inline-block;
     margin: 0 8px 8px 0;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
     border-radius: 2px;
+    .article-tag-list-link{
+        color: @textPrimaryColorWhite;
+    }
     // color: @primaryColor_2;
-    border: 1px dotted @primaryColor_2;
+    // border: 1px dotted @primaryColor_2;
     .transition(.2s);
     &:hover {
-        border-style: solid;
+        // border-style: solid;
         box-shadow: @boxShadow;
-        background: @primaryColor_2;
+        // background: @primaryColor_2;
         .article-tag-list-link{
             color: @textPrimaryColorWhite;
         }
     }
-    // &:nth-of-type(6n+1) {
-    //     background: @tag-color-1
-    // }
-    // &:nth-of-type(6n+2) {
-    //     background: @tag-color-2
-    // }
-    // &:nth-of-type(6n+3) {
-    //     background: @tag-color-3
-    // }
-    // &:nth-of-type(6n+4) {
-    //     background: @tag-color-4
-    // }
-    // &:nth-of-type(6n+5) {
-    //     background: @tag-color-5
-    // }
-    // &:nth-of-type(6n+6) {
-    //     background: @tag-color-6
-    // }
+    &:nth-of-type(6n+1) {
+        background: @tag-color-1
+    }
+    &:nth-of-type(6n+2) {
+        background: @tag-color-2
+    }
+    &:nth-of-type(6n+3) {
+        background: @tag-color-3
+    }
+    &:nth-of-type(6n+4) {
+        background: @tag-color-4
+    }
+    &:nth-of-type(6n+5) {
+        background: @tag-color-5
+    }
+    &:nth-of-type(6n+6) {
+        background: @tag-color-6
+    }
 }
 
 
@@ -273,7 +278,7 @@
     }
 }
 
-@media screen and (max-width:760px) {
+@media screen and (max-width:768px) {
     .post-title {
         font-size: @font-size + 6;
     }

@@ -218,6 +218,18 @@ local_search: true
 # 百度统计
 baidu_tongji: #appid
 
+# gitment评论系统
+## https://github.com/imsun/gitment
+gitment:
+  enable: false
+  lazy: true #是否开启初始化隐藏评论
+  owner: codefine #github账号
+  repo: gitment #留言仓库
+  oauth: 
+    client_id: #client_id
+    client_secret: #client_id
+  perPage: 10 #分页
+
 # valine评论系统
 ## https://valine.js.org/
 valine:

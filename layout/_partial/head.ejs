@@ -36,12 +36,16 @@
     <meta name="keywords" content="<%= keyWords %>">
     <%- favicon_tag(theme.favicon) %>
     <link rel="stylesheet" href="<%- url_for(theme_css('/css/style', cache)) %>">
+    <% if (!theme.valine.enable && theme.gitment.enable) { %>
+        <link rel="stylesheet" href="<%- url_for(theme_css('/css/third-party/gitment', cache)) %>">
+    <% } %>
     <script type="text/javascript">
         // Data Center
         var DC = {
             reward:	<%- Boolean(page.reward) %>,
             lv: JSON.parse('<%- JSON.stringify(theme.leancloud_visitors) %>'),
-            v: JSON.parse('<%- JSON.stringify(theme.valine) %>')
+            v: JSON.parse('<%- JSON.stringify(theme.valine) %>'),
+            g: JSON.parse('<%- JSON.stringify(theme.gitment) %>')
         };
     </script>
     <script type="text/javascript">

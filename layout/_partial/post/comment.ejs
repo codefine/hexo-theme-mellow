@@ -1,3 +1,7 @@
 <% if (theme.valine.enable) { %>
     <%- partial('../_plugins/valine') %>
 <% } %>
+
+<% if (!theme.valine.enable && theme.gitment.enable) { %>
+      <%- partial('../_plugins/gitment') %>
+<% } %>

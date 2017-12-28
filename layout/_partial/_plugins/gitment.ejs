@@ -1,0 +1,8 @@
+<% if (theme.gitment.lazy) { %>
+    <div onclick="ShowGitment()" id="gitment-display-button" style="display: block;">
+        <span>显示 Gitment 评论</span>
+    </div>
+    <div id="gitment" style="display: none;"></div>
+<% } else { %>
+    <div id="gitment"></div>
+<% } %>

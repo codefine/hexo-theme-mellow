@@ -333,6 +333,15 @@ $.extend({
 			$(this).css('height', Math.max(columns[0], columns[1]));
 			$(this).addClass('in');
 		})
+
+		var headerH = $("#main>.content-header").height();
+		var containerH = $("#main>.container").outerHeight(true);
+		var footerH = $(".footer").height();
+		var winH = $(window).height();
+		if ( headerH + containerH + footerH < winH ) {
+			var minH = winH - footerH - headerH - 10;
+			$("#main>.container").css('min-height', minH);
+		}
 	},
 	tabBar: function () {
 		var allTagsBtn = $('.tags-list-more');

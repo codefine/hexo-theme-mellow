@@ -24,6 +24,9 @@
     <% if (theme.valine.enable) { %>
         <%- partial("_third-party/valine") %>
     <% } %>
+    <% if (!theme.valine.enable && theme.gitment.enable) { %>
+        <%- partial('_third-party/gitment') %>
+    <% } %>
 <% } %>
 
 <% if (theme.leancloud_visitors.enable) { %>

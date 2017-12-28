@@ -6,3 +6,17 @@
         </a>
     </span>
 <% } %>
+
+<% if (!theme.valine.enable && theme.gitment.enable) { %>
+<span class="post-comments-counter" id="<%- url_for(post.path) %>">
+    <span class="post-meta-item-icon">
+        <i class="icon icon-comment-o"></i>
+    </span>
+    <%
+        const link = theme.gitment.lazy ? "gitment-display-button" : "gitment";
+    %>
+    <a href="<%- url_for(post.path) %>#<%= link %>">
+        <span class="post-comments-count gitment-comments-count" itemprop="commentsCount"></span>
+    </a>
+</span>
+<% } %>

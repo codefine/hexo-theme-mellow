@@ -23,6 +23,10 @@
     
     <div class="post-content" id="post-content" itemprop="postContent">
     <%
+        post.excerpt = post.excerpt.replace(/<table>(.+)<\/table>/, function(match, $1) {
+            $1 = $1.replace(/<br>/g, '');
+            return `<table>${$1}</table>`;
+        });
         // 首页缩略图大小及路径处理
         post.excerpt = post.excerpt.replace(/(img\s)(.+)(\>)/g, (match, $1, attrs, $2) => {
             let [src, alt, title = '', imgClass = '' ] = attrs.split(' ');

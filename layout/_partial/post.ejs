@@ -11,7 +11,7 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <%
-                post.content = post.content.replace(/<table>(.+)<\/table>/, function(match, $1) {
+                post.content = post.content.replace(/<table class="table">(.+)<\/table>/, function(match, $1) {
                     $1 = $1.replace(/<br>/g, '');
                     return `<table>${$1}</table>`;
                 });

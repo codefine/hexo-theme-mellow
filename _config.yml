@@ -135,6 +135,7 @@ defaultthumb: true
 ## excerpt_render为false时可进行手动截断。方法为在文章的markdown文件中加入<!--more-->，其之前的内容视为摘要部分。
 excerpt_render: false   #自动截断
 excerpt_length: 200     #截断长度
+excerpt_link: more      #更多按钮内容
 
 # 是否显示文章最后更新时间
 ## 位于文章底部的copyright

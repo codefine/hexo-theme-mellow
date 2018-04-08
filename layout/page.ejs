@@ -10,7 +10,7 @@
     <article class="page-article fade" itemprop="blogPage">
         <div class="post-content page-content" id="page-content" itemprop="pageContent">
             <%
-                page.content = page.content.replace(/<table>(.+)<\/table>/, function(match, $1) {
+                page.content = page.content.replace(/<table class="table">(.+)<\/table>/, function(match, $1) {
                     $1 = $1.replace(/<br>/g, '');
                     return `<table>${$1}</table>`;
                 });

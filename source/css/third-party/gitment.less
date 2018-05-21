@@ -122,6 +122,23 @@ a.gitment-header-issue-link:hover {
   min-height: 60px;
   padding-left: 60px;
   margin: 19px 0;
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#gitment{
+  transition: 0.5s;
+  height: auto;
+  overflow: hidden;
+  &.hide{
+    height: 0;
+    .gitment-comment,
+    .gitment-editor-container{
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
 }
 
 .gitment-comment-avatar,

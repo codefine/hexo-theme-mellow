@@ -11,15 +11,19 @@ if (id === "/") { //home
     pageGitment(id);
 }
 
+
 if (DC.g.lazy) {
     const main = document.getElementById("gitment");
-    if (main) {
-        main.style.display = "none";
+    const autoShow = /(#gitment-display-button)|(#gitment)$/.test(window.location.href);
+    if (autoShow) {
+        ShowGitment();
     }
     function ShowGitment() {
         const moreBtn = document.getElementById("gitment-display-button");
-        moreBtn.style.display = "none";
-        main.style.display = "block";
+        if (moreBtn) {
+            moreBtn.style.display = "none";
+        }
+        main.classList.remove('hide');
         const toggleRoot = document.querySelector(".post-comments-count.gitment-comments-count");
         if (toggleRoot) {
             toggleRoot.parentNode.href = toggleRoot.parentNode.href.replace(/#gitment-display-button/, "#gitment");

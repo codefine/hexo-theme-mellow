@@ -43,6 +43,10 @@ Material Design 风格的Hexo主题，基于 **Hexo 3.0+** & **Node 7.x+** 制�
 
 预览地址[https://codefine.github.io/](https://codefine.github.io/)
 
+## FAQ
+
+初次使用时`hexo g`报错，大部分情况是因为**缺少依赖**。前往[wiki-主题安装](https://github.com/codefine/hexo-theme-mellow/wiki/1.-%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85)查看如何安装依赖。
+
 ## Community
 
 QQ群：527753185

@@ -3,7 +3,7 @@
     hdClass: 'page-header'
 }) %>
 <%
-    page.reward = 'reward' in page ? (theme.reward && page.reward) : theme.reward;
+    page.reward = 'reward' in page ? !!theme.reward && !!page.reward : !!theme.reward;
     page.slug = 'hexo-page-' + page.path.replace(/\/index\.html$/,'').split('/').join('-');
 %>
 <div class="container body-wrap">
@@ -20,10 +20,8 @@
                 return '<div class="'+ $1 +'">'
             }) %>
         </div>
-        <% if (page.reward || typeof page.reward === "undefined") { 
-            if (theme.reward.alipay || theme.reward.wechat) { %>
+        <% if (page.reward) { %>
             <%- partial('_partial/post/reward-btn') %>
-            <% } %>
         <% } %>
         <% if (page.share || typeof page.share === "undefined") { %>
         <div class="card page-about-me flex-row">
@@ -42,9 +40,7 @@
         </div>
         <% } %>
     </article>
-    <% if (page.reward || typeof page.reward === "undefined") {
-        if (theme.reward.alipay || theme.reward.wechat) { %>
+    <% if (page.reward) { %>
         <%- partial('_partial/post/reward') %>
-        <% }
-    } %>
+    <% } %>
 </div>

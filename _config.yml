@@ -33,6 +33,10 @@ headerBg: /img/banner.jpg
 ## 假设配置为 canonical: http://www.lujingtao.com，那么从搜索引擎中 www.lujingtao.com 进入会重定向到 lujingtao.com
 canonical: false
 
+# DaoVoice 聊天室
+daovoice:
+  app_id: 
+
 ##############################################################################################################################
 
 #####################

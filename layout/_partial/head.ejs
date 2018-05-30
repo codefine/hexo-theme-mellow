@@ -45,10 +45,14 @@
             reward:	<%- Boolean(page.reward) %>,
             lv: JSON.parse('<%- JSON.stringify(theme.leancloud_visitors) %>'),
             v: JSON.parse('<%- JSON.stringify(theme.valine) %>'),
-            g: JSON.parse('<%- JSON.stringify(theme.gitment) %>')
+            g: JSON.parse('<%- JSON.stringify(theme.gitment) %>'),
+            d: JSON.parse('<%- JSON.stringify(theme.daovoice) %>')
         };
     </script>
     <script type="text/javascript">
         window.lazyScripts=[];
     </script>
+    <% if(theme.daovoice.app_id){ %>
+        <script type="text/javascript" src="<%- url_for(theme_js('/js/plugins/daovoice', cache)) %>"></script>
+    <% }%>
 </head>

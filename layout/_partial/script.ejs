@@ -20,6 +20,10 @@
 <%- partial('_third-party/local_search') %>
 <% } %>
 
+<% if (theme.visit_counter) { %>
+<%- partial('_third-party/visit_counter') %>
+<% } %>
+
 <% if ( page.comments || typeof page.comments === "undefined" ) { %>
     <% if (theme.valine.enable) { %>
         <%- partial("_third-party/valine") %>

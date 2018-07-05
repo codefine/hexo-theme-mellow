@@ -5,7 +5,13 @@
     }) %>
     <div class="container body-wrap">
         <ul class="post-list">
-        <% page.posts.forEach(function (post, index) { %>
+        <% 
+        if (theme.articleSort) {
+            page.posts.data = page.posts.data.sort(function(a, b) {
+                return Number(a.updated.format('x')) < Number(b.updated.format('x')) ? 1 : -1;
+            });
+        }
+        page.posts.forEach(function (post, index) { %>
             <li class="post-list-item fade">
                 <%- partial('_partial/index-item', {
                     post: post,

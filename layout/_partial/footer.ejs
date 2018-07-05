@@ -1,9 +1,6 @@
 <footer class="footer">
     <% if (theme.visit_counter || theme.blogroll) { %>
     <div class="top">
-        <% if (theme.visit_counter) { %>
-            <%- partial("_plugins/site-visitor") %>
-        <% } %>
         <% if (theme.blogroll) { %>
             <%- partial("_plugins/blogroll") %>
         <% } %>
@@ -31,6 +28,10 @@
             <span>
 	            Hosted by <a href="https://coding.net/pages" target="_blank">Coding Pages</a>
             </span>
+            <% } %>
+
+            <% if (theme.visit_counter) { %>
+                <%- partial("_plugins/site-visitor") %>
             <% } %>
         </p>
     </div>

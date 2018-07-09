@@ -7,15 +7,13 @@
         <ul class="post-list">
         <% 
         if (theme.articleSort) {
-            site.posts.forEach(item => {
-                console.log(item.updated, item.slug);
-            })
             site.posts.data = site.posts.data.sort(function(a, b) {
                 return Number(a.updated.format('x')) < Number(b.updated.format('x')) ? 1 : -1;
             });
         }
-        var startIndex = (page.current - 1) * config.index_generator.per_page;
-        var endIndex = startIndex + config.index_generator.per_page;
+        var perPage = config.per_page || config.index_generator.per_page || config.topindex_generator.per_page || 10;
+        var startIndex = (page.current - 1) * perPage;
+        var endIndex = startIndex + perPage;
         site.posts.slice(startIndex, endIndex).forEach(function (post, index) { %>
             <li class="post-list-item fade">
                 <%- partial('_partial/index-item', {

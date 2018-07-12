@@ -61,3 +61,5 @@ QQ群：527753185
 [逸如风's Blog](http://www.sivan0222.cn/) - 未来的小幸运 || 致正在努力的我们--------逸如风
 
 [YuanLiChenAi](https://www.yuanlichenai.cn/) - https://www.yuanlichenai.cn/
+
+[Zip的小窝](https://ourfor.top/) - https://ourfor.top/

@@ -1,6 +1,8 @@
 <!-- main-js -->
-<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="<%- url_for(theme_js('/js/plugins/fastclick', cache)) %>"></script>
+<script type="text/javascript" src="<%- url_for(theme_js('/js/plugins/ios-orientationchange-fix', cache)) %>"></script>
+<script type="text/javascript" src="<%- url_for(theme_js('/js/plugins/jquery.swipebox.min', cache)) %>"></script>
 <% if (theme.waves) { %>
 <script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <% } %>
@@ -8,6 +10,8 @@
 <script type="text/javascript" src="<%- url_for(theme_js('/js/blog', cache)) %>"></script>
 
 <!-- third-party -->
+<%- partial("_third-party/swipebox") %>
+
 <% if (page.repo) { %>
     <%- partial("_third-party/github_repo") %>
 <% } %>

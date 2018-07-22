@@ -5,6 +5,19 @@
 <%
     page.reward = 'reward' in page ? !!theme.reward && !!page.reward : !!theme.reward;
     page.slug = 'hexo-page-' + page.path.replace(/\/index\.html$/,'').split('/').join('-');
+    page.content = page.content.replace(/<img([^>]+)>/g, function(img) {
+        var src = img.replace(/<img.+src(="([^"]+)")*.+>/, function($1, $2, $3) {
+            return $3;
+        });
+        var title = img.replace(/<img.+title(="([^"]+)")*.+>/, function($1, $2, $3) {
+            return $3;
+        });
+        var alt = img.replace(/<img.+alt(="([^"]+)")*.+>/, function($1, $2, $3) {
+            return $3;
+        });
+        title = title ? title : (alt ? alt : "");
+        return `<a rel=${page.title} href="${src}" class="swipebox" title=${title}>${img}</a>`
+    });
 %>
 <div class="container body-wrap">
     <article class="page-article fade" itemprop="blogPage">

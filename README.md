@@ -55,3 +55,5 @@ QQ群：527753185
 [Zip的小窝](https://ourfor.top/) - https://ourfor.top/
 
 [Victory heart.](https://www.ojbk.tw/) - https://www.ojbk.tw/
+
+[ZhangQiang's blog](https://zq-jhon.github.io/) - https://zq-jhon.github.io/

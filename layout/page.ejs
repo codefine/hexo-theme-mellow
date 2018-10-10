@@ -15,8 +15,8 @@
         var alt = img.replace(/<img.+alt(="([^"]+)")*.+>/, function($1, $2, $3) {
             return $3;
         });
-        title = title ? title : (alt ? alt : "");
-        return `<a rel=${page.title} href="${src}" class="swipebox" title=${title}>${img}</a>`
+        title = title !== img && title ? title : (alt !== img && alt ? alt : "");
+        return `<a rel=${post.title} href="${src}" class="swipebox" title="${title}">${img}</a>`
     });
 %>
 <div class="container body-wrap">

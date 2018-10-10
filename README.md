@@ -48,7 +48,7 @@ QQ群：527753185
 
 [Liu Forint's blog](https://blog.liufulin.online/) - https://blog.liufulin.online/
 
-[逸如风's Blog](http://www.sivan0222.cn/) - http://www.sivan0222.cn/
+[yirufeng's Blog](http://www.sivan.tech) - http://www.sivan.tech
 
 [YuanLiChenAi](https://yuanlichenai.cn/) - https://yuanlichenai.cn/
 

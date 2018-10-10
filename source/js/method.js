@@ -55,7 +55,12 @@ $.extend({
 					toc.find('li.active').removeClass('active');
 					target.addClass('active');
 					target.parents('.post-toc-item').addClass('active');
-					tocBar.css("top", target.position().top);
+					tocBar.css("top", target.position().top + toc.scrollTop());
+					if (target.position().top + toc.scrollTop() > 400) {
+						toc.scrollTop(target.position().top + toc.scrollTop() - 400 + tocBar.outerHeight(true));
+					} else {
+						toc.scrollTop(0);
+					}
 				}
 				if (top < titles.eq(0).offset().top) {
 					toc.find('li.active').removeClass('active');

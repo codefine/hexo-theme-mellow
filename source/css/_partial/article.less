@@ -3,7 +3,7 @@
     position: absolute;
     right: -@asideW - 30px;
     top: -@postOffsetY + 10px;
-    max-height: @asideMaxH;
+    max-height: calc(~"100% - @{topBarH} * 3 - 40px - 16px");
     overflow-y: scroll;
     &.fixed {
         // .transition(0.4s);

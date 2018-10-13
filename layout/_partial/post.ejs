@@ -22,7 +22,7 @@
                         return $3;
                     });
                     title = title !== img && title ? title : (alt !== img && alt ? alt : "");
-                    return `<a rel=${post.title} href="${src}" class="swipebox" title="${title}">${img}</a>`
+                    return `<a rel=$return `<a return `<a rel=${post.title} href="${src}"  title="${title}" data-fancybox="images">${img}</a>`
                 });
                 post.content = post.content.replace(/<table class="table">(.+)<\/table>/, function(match, $1) {
                     $1 = $1.replace(/<br>/g, '');

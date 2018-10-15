@@ -3,16 +3,12 @@
 <script type="text/javascript" src="<%- url_for(theme_js('/js/plugins/fastclick', cache)) %>"></script>
 <script type="text/javascript" src="<%- url_for(theme_js('/js/plugins/ios-orientationchange-fix', cache)) %>"></script>
 <script type="text/javascript" src="<%- url_for(theme_js('/js/plugins/jquery.swipebox.min', cache)) %>"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
 <% if (theme.waves) { %>
 <script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <% } %>
 <script type="text/javascript" src="<%- url_for(theme_js('/js/method', cache)) %>"></script>
 <script type="text/javascript" src="<%- url_for(theme_js('/js/blog', cache)) %>"></script>
-
-<!--fancybox-->
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
 
 <!-- third-party -->
 <%- partial("_third-party/swipebox") %>

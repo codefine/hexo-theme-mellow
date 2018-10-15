@@ -35,7 +35,7 @@
     %>
     <meta name="keywords" content="<%= keyWords %>">
     <%- favicon_tag(theme.favicon) %>
-    <link rel="stylesheet" href="<%- url_for(theme_css('/css/third-party/swipebox.min', cache)) %>">
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="<%- url_for(theme_css('/css/style', cache)) %>">
     <% if (!theme.valine.enable && theme.gitment.enable) { %>
         <link rel="stylesheet" href="<%- url_for(theme_css('/css/third-party/gitment', cache)) %>">

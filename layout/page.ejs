@@ -16,7 +16,7 @@
             return $3;
         });
         title = title !== img && title ? title : (alt !== img && alt ? alt : "");
-        return `<a return `<a rel=${post.title} href="${src}"  title="${title}" data-fancybox="images">${img}</a>`
+        return `<a rel=${page.title} href="${src}" title="${title}" data-fancybox="images">${img}</a>`;
     });
 %>
 <div class="container body-wrap">

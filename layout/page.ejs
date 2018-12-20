@@ -6,15 +6,9 @@
     page.reward = 'reward' in page ? !!theme.reward && !!page.reward : !!theme.reward;
     page.slug = 'hexo-page-' + page.path.replace(/\/index\.html$/,'').split('/').join('-');
     page.content = page.content.replace(/<img([^>]+)>/g, function(img) {
-        var src = img.replace(/<img.+src(="([^"]+)")*.+>/, function($1, $2, $3) {
-            return $3;
-        });
-        var title = img.replace(/<img.+title(="([^"]+)")*.+>/, function($1, $2, $3) {
-            return $3;
-        });
-        var alt = img.replace(/<img.+alt(="([^"]+)")*.+>/, function($1, $2, $3) {
-            return $3;
-        });
+        var src = img.match(/src="([^"]+)"/)[1];
+        var title = img.match(/title="([^"]+)"/) ? img.match(/title="([^"]+)"/)[1] : '';
+        var alt = img.match(/alt="([^"]+)"/) ? img.match(/alt="([^"]+)"/)[1] : '';
         title = title !== img && title ? title : (alt !== img && alt ? alt : "");
         return `<a rel=${page.title} href="${src}" title="${title}" data-fancybox="images">${img}</a>`;
     });

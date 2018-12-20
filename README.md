@@ -1,6 +1,6 @@
 hexo-theme-mellow
 =================
-[![](https://img.shields.io/badge/release-v1.3.9-blue.svg?style=flat-square)](https://github.com/codefine/hexo-theme-mellow/releases)
+[![](https://img.shields.io/badge/release-v1.4.0-blue.svg?style=flat-square)](https://github.com/codefine/hexo-theme-mellow/releases)
 [![](https://img.shields.io/badge/document-CN-green.svg?style=flat-square)](https://github.com/codefine/hexo-theme-mellow/wiki)
 [![](https://img.shields.io/badge/preview-Michael.Lu's%20blog-ff69b4.svg?style=flat-square)](https://blog.lujingtao.com)
 [![Join the chat at https://gitter.im/hexo-theme-mellow/Lobby](https://badges.gitter.im/hexo-theme-mellow/Lobby.svg)](https://gitter.im/codefine/hexo-theme-mellow?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
@@ -36,7 +36,7 @@ Material Design 风格的Hexo主题，基于 **Hexo 3.0+** & **Node 7.x+** 制�
 
 ## FAQ
 
-初次使用时`hexo g`报错，大部分情况是因为**缺少依赖**。前往[wiki-主题安装](https://github.com/codefine/hexo-theme-mellow/wiki/1.-%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85)查看如何安装依赖。
+初次使用时`hexo g`报错，大部分情况是因为**缺少依赖**，或者依赖版本问题。前往[wiki-主题安装](https://github.com/codefine/hexo-theme-mellow/wiki/1.-%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85)查看如何安装依赖。
 
 ## Community
 

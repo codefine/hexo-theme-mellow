@@ -46,14 +46,10 @@ QQ群：527753185
 
 > 下方陈列长期使用mellow主题的博客地址，不定期更新。需要的话请提交issue并附上博客的在线地址。
 
-[Liu Forint's blog](https://blog.liufulin.online/) - https://blog.liufulin.online/
-
 [yirufeng's Blog](http://www.sivan.tech) - http://www.sivan.tech
 
-[YuanLiChenAi](https://yuanlichenai.cn/) - https://yuanlichenai.cn/
+[YuanLiChenAi](https://blog.yuanlichenai.cn/) - https://blog.yuanlichenai.cn/
 
-[Zip的小窝](https://ourfor.top/) - https://ourfor.top/
-
-[Victory heart.](https://www.ojbk.tw/) - https://www.ojbk.tw/
+[Zip的小窝](https://blog.ourfor.top/) - https://blog.ourfor.top/
 
 [ZhangQiang's blog](https://zq-jhon.github.io/) - https://zq-jhon.github.io/

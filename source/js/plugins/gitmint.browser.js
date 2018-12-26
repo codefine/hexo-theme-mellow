@@ -4263,8 +4263,12 @@ var Gitment = function () {
 
       return this.getIssue().then(function (issue) {
         var matched = issue.comments_url.match(rx_url_with_protocol);
-        return _utils.http.get(matched[3], { page: page, per_page: _this8.perPage }, matched[1] || undefined);
-      }).then(function (comments) {
+        return _utils.http.get(matched[3], {}, matched[1] || undefined);
+    }).then(function (comments) {
+        comments.sort(function(a, b) {
+            return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+        });
+        comments = comments.slice((page - 1) * _this8.perPage, page * _this8.perPage);
         _this8.state.comments = comments;
         return comments;
       });

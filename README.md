@@ -48,7 +48,7 @@ QQ群：527753185
 
 [yirufeng's Blog](http://www.sivan.tech) - http://www.sivan.tech
 
-[YuanLiChenAi](https://blog.yuanlichenai.cn/) - https://blog.yuanlichenai.cn/
+[YuanLiChenAi](https://yuanlichenai.cn/) - https://yuanlichenai.cn/
 
 [Zip的小窝](https://blog.ourfor.top/) - https://blog.ourfor.top/
 

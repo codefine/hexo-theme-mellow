@@ -93,13 +93,13 @@ $.extend({
 		var menu = $('#menu');
 		var root = $('html');
 		var mask = $('#mask');
+		var footer = $('footer');
 		var headerTitle = $('.header-title');
 		var isWX = /micromessenger/i.test(navigator.userAgent);
 		return {
 			init: function () {
 				var menuToggle = $('#menu-toggle');
 				var menuOff = $('#menu-off');
-				menu.removeClass('hide');
 				menuToggle.click(function (e) {
 					e.preventDefault();
 					$.toggleMenu().show();
@@ -110,6 +110,7 @@ $.extend({
 				});
 				if ($(document).width() >= $.menuInWidth) {
 					headerTitle.addClass('push');
+					footer.removeClass('onMenuHide');
 				}
 			},
 			show: function () {
@@ -129,6 +130,7 @@ $.extend({
 					}
 				} else {
 					headerTitle.addClass('push');
+					footer.removeClass('onMenuHide');
 				}
 			},
 			hide: function () {
@@ -136,6 +138,7 @@ $.extend({
 				menu.addClass('hide');
 				mask.removeClass('in');
 				headerTitle.removeClass('push');
+				footer.addClass('onMenuHide');
 				if (isWX) {
 					var top = $(document).scrollTop();
 					main.removeClass('lock');
@@ -153,6 +156,12 @@ $.extend({
 			header.addClass('fixed');
 		} else {
 			header.removeClass('fixed');
+		}
+	},
+	initFooter: function() {
+		var footer = $('.footer');
+		if (footer.hasClass('fixed')) {
+			$('#main').css('paddingBottom', footer.outerHeight())
 		}
 	},
 	toggleGoTop: function () {

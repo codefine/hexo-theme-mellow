@@ -1,5 +1,6 @@
 $.BLOG = {
 	init: function() {
+		this.console();
 		this.basic();
 		this.menu();
 		setTimeout(function(THIS) {
@@ -16,7 +17,11 @@ $.BLOG = {
 		this.waves();
 		this.mask();
 		this.waterfall();
+		this.footer();
 		this.tabBar();
+	},
+	console: function() {
+		console.log('%cMellow','background:#aaa;color:#bada55', 'https://github.com/codefine/hexo-theme-mellow');
 	},
 	basic: function() {
 		$.fixedClick();
@@ -30,6 +35,9 @@ $.BLOG = {
 			var top = $(window).scrollTop();
 		}
 		$.fixedHeader(top);
+	},
+	footer: function() {
+		$.initFooter();
 	},
 	toc: function() {
 		var toc = $('#post-toc');

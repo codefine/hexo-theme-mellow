@@ -13,7 +13,7 @@
         return `<a rel=${page.title} href="${src}" title="${title}" data-fancybox="images">${img}</a>`;
     });
 %>
-<div class="container body-wrap">
+<div class="container body-wrap <%- theme.footer_fixation ? 'footer_fixation' : '' %>">
     <article class="page-article fade" itemprop="blogPage">
         <div class="post-content page-content" id="page-content" itemprop="pageContent">
             <%

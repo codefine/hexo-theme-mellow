@@ -220,8 +220,15 @@
 }
 
 .footer {
+    width: 100%;
     color: saturate(@textPrimaryColorWhite, 0.6);
     background: @darkPrimaryColor;
+    &.fixed{
+        position: fixed;
+        bottom: 0;
+        z-index: 87;
+    }
+
     p {
         margin: 0;
         line-height: 1.6;
@@ -261,6 +268,16 @@
     }
     .bottom {
         padding: 16px;
+    }
+}
+
+@media screen and (min-width:1240px) {
+    .footer{
+        padding-left: @menuWidth;
+        .transition(.4s);
+        &.onMenuHide{
+            padding-left: 0;
+        }
     }
 }
 

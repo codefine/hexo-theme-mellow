@@ -1,56 +1,55 @@
 <article id="<%= post.layout %>-<%= post.slug %>"
-    class="post-article article-type-<%= post.layout %>" itemprop="blogPost">
-      <div class="post-card">
-          <h1 class="post-card-title"><%- post.title %></h1>
-          <div class="post-meta">
-              <%- partial('post/date', {date_format: config.date_format}) %>
-              <%- partial('post/category') %>
-              <%- partial('post/visitor') %>
-              <%- partial('post/comment-count') %>
-              <%- partial('post/music') %>
-          </div>
-          <div class="post-content" id="post-content" itemprop="postContent">
-              <%
-                  post.content = post.content.replace(/<img([^>]+)>/g, function(img) {
-                      var src = img.match(/src="([^"]+)"/)[1];
-                      var title = img.match(/title="([^"]+)"/) ? img.match(/title="([^"]+)"/)[1] : '';
-                      var alt = img.match(/alt="([^"]+)"/) ? img.match(/alt="([^"]+)"/)[1] : '';
-                      title = title !== img && title ? title : (alt !== img && alt ? alt : "");
-                      return `<a rel=${post.title} href="${src}" title="${title}" data-fancybox="images">${img}</a>`;
-                  });
-                  post.content = post.content.replace(/<table class="table">(.+)<\/table>/, function(match, $1) {
-                      $1 = $1.replace(/<br>/g, '');
-                      return `<table>${$1}</table>`;
-                  });
-              %>
-              <%- post.content.replace(/<p>}<\/p>/g, '</div>')
-                      .replace(/<p>@([\w-]+){<\/p>/g, function(match, $1){
-                          return '<div class="'+ $1 +'">'
-              }) %>
-          </div>
-          <%- partial('post/copyright') %>
-          <% if (post.reward || typeof post.reward === "undefined") { 
-              if (theme.reward.alipay || theme.reward.wechat) { %>
-              <%- partial('post/reward-btn') %>
-              <% } %>
-          <% } %>
-          <div class="post-footer">
-              <%- partial('post/tag') %>
-              <%- partial('post/share-fab') %>
-          </div>
-          <% if (post.comment || typeof post.comment === "undefined") { %>
-              <%- partial('post/comment') %>
-          <% } %>
-      </div>
-      <%- partial('post/nav') %>
-      <% if (page.repo) { %>
-          <%- partial('post/repo') %>
-      <% } %>
-      <%- partial('post/toc', { post: page}) %>
-  </article>
-  <% if (post.reward || typeof post.reward === "undefined") {
-      if (theme.reward.alipay || theme.reward.wechat) { %>
-      <%- partial('post/reward') %>
-      <% }
-  } %>
-  
+  class="post-article article-type-<%= post.layout %>" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title"><%- post.title %></h1>
+        <div class="post-meta">
+            <%- partial('post/date', {date_format: config.date_format}) %>
+            <%- partial('post/category') %>
+            <%- partial('post/visitor') %>
+            <%- partial('post/comment-count') %>
+            <%- partial('post/music') %>
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <%
+                post.content = post.content.replace(/<img([^>]+)>/g, function(img) {
+                    var src = img.match(/src="([^"]+)"/)[1];
+                    var title = img.match(/title="([^"]+)"/) ? img.match(/title="([^"]+)"/)[1] : '';
+                    var alt = img.match(/alt="([^"]+)"/) ? img.match(/alt="([^"]+)"/)[1] : '';
+                    title = title !== img && title ? title : (alt !== img && alt ? alt : "");
+                    return `<a rel=${post.title} href="${src}" title="${title}" data-fancybox="images">${img}</a>`;
+                });
+                post.content = post.content.replace(/<table class="table">(.+)<\/table>/, function(match, $1) {
+                    $1 = $1.replace(/<br>/g, '');
+                    return `<table>${$1}</table>`;
+                });
+            %>
+            <%- post.content.replace(/<p>}<\/p>/g, '</div>')
+                    .replace(/<p>@([\w-]+){<\/p>/g, function(match, $1){
+                        return '<div class="'+ $1 +'">'
+            }) %>
+        </div>
+        <%- partial('post/copyright') %>
+        <% if (post.reward || typeof post.reward === "undefined") { 
+            if (theme.reward.alipay || theme.reward.wechat) { %>
+            <%- partial('post/reward-btn') %>
+            <% } %>
+        <% } %>
+        <div class="post-footer">
+            <%- partial('post/tag') %>
+            <%- partial('post/share-fab') %>
+        </div>
+        <% if (post.comment || typeof post.comment === "undefined") { %>
+            <%- partial('post/comment') %>
+        <% } %>
+    </div>
+    <%- partial('post/nav') %>
+    <% if (page.repo) { %>
+        <%- partial('post/repo') %>
+    <% } %>
+    <%- partial('post/toc', { post: page}) %>
+</article>
+<% if (post.reward || typeof post.reward === "undefined") {
+    if (theme.reward.alipay || theme.reward.wechat) { %>
+    <%- partial('post/reward') %>
+    <% }
+} %>

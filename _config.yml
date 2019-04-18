@@ -19,7 +19,7 @@ less:
 favicon: /img/favicon.ico
 
 # 头部背景
-# 如/img/avatar.jpg 或 https://i.loli.net/2017/12/12/5a2fd18a74471.jpg
+# 如/img/banner.jpg 或 https://i.loli.net/2017/12/12/5a2fd18a74471.jpg
 headerBg: /img/banner.jpg
 
 # 动态定义title

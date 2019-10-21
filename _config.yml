@@ -54,7 +54,7 @@ visit_counter:
 #####################
 
 # 头像
-avatar: /img/avatar.jpg
+avatar: http://q1.qlogo.cn/g?b=qq&nk=591369735&s=640
 
 # 头像点击后的链接地址
 avatar_link: / #默认为主页
@@ -63,19 +63,21 @@ avatar_link: / #默认为主页
 brand: /img/brand.jpg
 
 # 电子邮件
-email: 277133779@qq.com
+email: RedContritio@qq.com
 
 # 电子邮件下方的链接图标
 ## 新连接规则[name]: url | icon
 ## 使用fontawesome图标，只需要写图标名。github -> icon-github | fa-github
 ## http://http://fontawesome.dashgame.com/
 menu_link: 
-  github: https://github.com/codefine | github
+  github: https://github.com/RedContritio | github
+  QQ: https://user.qzone.qq.com/591369735/main | qq
+  Bilibili: https://space.bilibili.com/8280700 | mars-double
 
 # 添加新菜单项遵循以下规则
 ## menu:
 ##  link:               [必要][不渲染] 用于区分类别
-##    icon: _blank      [必要][渲染] 菜单图标。使用内置fontawesome图标，省略前缀
+##    icon: _blank         [必要][渲染] 菜单图标。使用内置fontawesome图标，省略前缀
 ##    text: About       [必要][渲染] 菜单文字信息
 ##    url: /about       [必要][渲染] 菜单链接，绝对或相对路径。
 ##    target: _blank    [必要][不渲染] 是否跳出，省略则在当前页面打开
@@ -139,9 +141,9 @@ top_icon: true
 # 页面标题
 ## 标签页 / 分类页 / 归档页的标题只能在这里设置
 ## 其他自定义页面标题在页面markdown文件的title中设置
-tags_title: Tags              #标签页
-categories_title: Categories  #分类页
-archives_title: Archives      #归档页
+tags_title: 标签              #标签页
+categories_title: 分类        #分类页
+archives_title: 归档          #归档页
 
 # 主页文章摘要缩略图
 defaultthumb: true
@@ -152,11 +154,11 @@ defaultthumb: true
 ## excerpt_render为false时可进行手动截断。方法为在文章的markdown文件中加入<!--more-->，其之前的内容视为摘要部分。
 excerpt_render: false   #自动截断
 excerpt_length: 200     #截断长度
-excerpt_link: more      #更多按钮内容
+excerpt_link: ······      #更多按钮内容
 
 # 是否显示文章最后更新时间
 ## 位于文章底部的copyright
-show_last_updated: true
+show_last_updated: false
 
 # 版权信息copyright
 ## 位于文章底部
@@ -166,14 +168,14 @@ postMessage: 转载注明出处，原文地址：<a href="<%- url_for(page.path)
 # 打赏
 ## 可以在文章markdown中设置reward: false来取消本篇文章的打赏功能
 ## 全局取消直接注释下方配置
-reward:
-  title: 我们一起来让这个世界有趣一点
-  wechat: /img/reward-wechat.jpg     #微信
-  alipay: /img/reward-alipay.jpg     #支付宝
+#reward:
+  #title: 我们一起来让这个世界有趣一点
+  #wechat: /img/reward-wechat.jpg     #微信
+  #alipay: /img/reward-alipay.jpg     #支付宝
 
 # 分享
 ## 内置6种分享途径，不需要的设置对应的为false
-## 可以在文章markdown中设置share: false来取消本篇文章的打赏功能
+## 可以在文章markdown中设置share: false来取消本篇文章的分享功能
 ## 全局取消直接注释下方配置
 share_items:
   weibo: true
@@ -200,10 +202,10 @@ toc:
 footer_fixation: false
 
 # 友情链接
-blogroll:
-  item1:
-    name: HOME
-    url: https://www.lujingtao.com
+#blogroll:
+  #item1:
+    #name: HOME
+    #url: https://www.lujingtao.com
   #item2:
     #name: gitee
     #url: https://www.gitee.com
@@ -264,7 +266,7 @@ valine:
 
 # 文章浏览统计
 leancloud_visitors:
-  enable: false
+  enable: true
   app_id: #appid
   app_key: #appkey
   icon: true #true只显示图标，false只显示文字
@@ -276,3 +278,10 @@ mathjax:
 
 # 是否使用按钮waves插件
 waves: true
+
+# mermaid chart
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+  version: "7.1.2" # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    #startOnload: true  // default true
